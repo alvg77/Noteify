@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B739EA12A5758B200EDAF5D /* StamSoftProizvodstvenaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B739EA02A5758B200EDAF5D /* StamSoftProizvodstvenaApp.swift */; };
+		4B739EA32A5758B200EDAF5D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B739EA22A5758B200EDAF5D /* ContentView.swift */; };
+		4B739EA52A5758B300EDAF5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B739EA42A5758B300EDAF5D /* Assets.xcassets */; };
+		4B739EA82A5758B300EDAF5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B739EA72A5758B300EDAF5D /* Preview Assets.xcassets */; };
+		4B739EB22A5758B300EDAF5D /* StamSoftProizvodstvenaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B739EB12A5758B300EDAF5D /* StamSoftProizvodstvenaTests.swift */; };
+		4B739EBC2A5758B300EDAF5D /* StamSoftProizvodstvenaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B739EBB2A5758B300EDAF5D /* StamSoftProizvodstvenaUITests.swift */; };
+		4B739EBE2A5758B300EDAF5D /* StamSoftProizvodstvenaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B739EBD2A5758B300EDAF5D /* StamSoftProizvodstvenaUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4B739EAE2A5758B300EDAF5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B739E952A5758B200EDAF5D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B739E9C2A5758B200EDAF5D;
+			remoteInfo = StamSoftProizvodstvena;
+		};
+		4B739EB82A5758B300EDAF5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B739E952A5758B200EDAF5D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B739E9C2A5758B200EDAF5D;
+			remoteInfo = StamSoftProizvodstvena;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4B739E9D2A5758B200EDAF5D /* StamSoftProizvodstvena.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StamSoftProizvodstvena.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B739EA02A5758B200EDAF5D /* StamSoftProizvodstvenaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StamSoftProizvodstvenaApp.swift; sourceTree = "<group>"; };
+		4B739EA22A5758B200EDAF5D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4B739EA42A5758B300EDAF5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4B739EA72A5758B300EDAF5D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4B739EAD2A5758B300EDAF5D /* StamSoftProizvodstvenaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StamSoftProizvodstvenaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B739EB12A5758B300EDAF5D /* StamSoftProizvodstvenaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StamSoftProizvodstvenaTests.swift; sourceTree = "<group>"; };
+		4B739EB72A5758B300EDAF5D /* StamSoftProizvodstvenaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StamSoftProizvodstvenaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B739EBB2A5758B300EDAF5D /* StamSoftProizvodstvenaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StamSoftProizvodstvenaUITests.swift; sourceTree = "<group>"; };
+		4B739EBD2A5758B300EDAF5D /* StamSoftProizvodstvenaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StamSoftProizvodstvenaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4B739E9A2A5758B200EDAF5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B739EAA2A5758B300EDAF5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B739EB42A5758B300EDAF5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B739E942A5758B200EDAF5D = {
+			isa = PBXGroup;
+			children = (
+				4B739E9F2A5758B200EDAF5D /* StamSoftProizvodstvena */,
+				4B739EB02A5758B300EDAF5D /* StamSoftProizvodstvenaTests */,
+				4B739EBA2A5758B300EDAF5D /* StamSoftProizvodstvenaUITests */,
+				4B739E9E2A5758B200EDAF5D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4B739E9E2A5758B200EDAF5D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4B739E9D2A5758B200EDAF5D /* StamSoftProizvodstvena.app */,
+				4B739EAD2A5758B300EDAF5D /* StamSoftProizvodstvenaTests.xctest */,
+				4B739EB72A5758B300EDAF5D /* StamSoftProizvodstvenaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4B739E9F2A5758B200EDAF5D /* StamSoftProizvodstvena */ = {
+			isa = PBXGroup;
+			children = (
+				4B739EA02A5758B200EDAF5D /* StamSoftProizvodstvenaApp.swift */,
+				4B739EA22A5758B200EDAF5D /* ContentView.swift */,
+				4B739EA42A5758B300EDAF5D /* Assets.xcassets */,
+				4B739EA62A5758B300EDAF5D /* Preview Content */,
+			);
+			path = StamSoftProizvodstvena;
+			sourceTree = "<group>";
+		};
+		4B739EA62A5758B300EDAF5D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4B739EA72A5758B300EDAF5D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4B739EB02A5758B300EDAF5D /* StamSoftProizvodstvenaTests */ = {
+			isa = PBXGroup;
+			children = (
+				4B739EB12A5758B300EDAF5D /* StamSoftProizvodstvenaTests.swift */,
+			);
+			path = StamSoftProizvodstvenaTests;
+			sourceTree = "<group>";
+		};
+		4B739EBA2A5758B300EDAF5D /* StamSoftProizvodstvenaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4B739EBB2A5758B300EDAF5D /* StamSoftProizvodstvenaUITests.swift */,
+				4B739EBD2A5758B300EDAF5D /* StamSoftProizvodstvenaUITestsLaunchTests.swift */,
+			);
+			path = StamSoftProizvodstvenaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4B739E9C2A5758B200EDAF5D /* StamSoftProizvodstvena */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B739EC12A5758B300EDAF5D /* Build configuration list for PBXNativeTarget "StamSoftProizvodstvena" */;
+			buildPhases = (
+				4B739E992A5758B200EDAF5D /* Sources */,
+				4B739E9A2A5758B200EDAF5D /* Frameworks */,
+				4B739E9B2A5758B200EDAF5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StamSoftProizvodstvena;
+			productName = StamSoftProizvodstvena;
+			productReference = 4B739E9D2A5758B200EDAF5D /* StamSoftProizvodstvena.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4B739EAC2A5758B300EDAF5D /* StamSoftProizvodstvenaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B739EC42A5758B300EDAF5D /* Build configuration list for PBXNativeTarget "StamSoftProizvodstvenaTests" */;
+			buildPhases = (
+				4B739EA92A5758B300EDAF5D /* Sources */,
+				4B739EAA2A5758B300EDAF5D /* Frameworks */,
+				4B739EAB2A5758B300EDAF5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B739EAF2A5758B300EDAF5D /* PBXTargetDependency */,
+			);
+			name = StamSoftProizvodstvenaTests;
+			productName = StamSoftProizvodstvenaTests;
+			productReference = 4B739EAD2A5758B300EDAF5D /* StamSoftProizvodstvenaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4B739EB62A5758B300EDAF5D /* StamSoftProizvodstvenaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B739EC72A5758B300EDAF5D /* Build configuration list for PBXNativeTarget "StamSoftProizvodstvenaUITests" */;
+			buildPhases = (
+				4B739EB32A5758B300EDAF5D /* Sources */,
+				4B739EB42A5758B300EDAF5D /* Frameworks */,
+				4B739EB52A5758B300EDAF5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B739EB92A5758B300EDAF5D /* PBXTargetDependency */,
+			);
+			name = StamSoftProizvodstvenaUITests;
+			productName = StamSoftProizvodstvenaUITests;
+			productReference = 4B739EB72A5758B300EDAF5D /* StamSoftProizvodstvenaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4B739E952A5758B200EDAF5D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					4B739E9C2A5758B200EDAF5D = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					4B739EAC2A5758B300EDAF5D = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 4B739E9C2A5758B200EDAF5D;
+					};
+					4B739EB62A5758B300EDAF5D = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 4B739E9C2A5758B200EDAF5D;
+					};
+				};
+			};
+			buildConfigurationList = 4B739E982A5758B200EDAF5D /* Build configuration list for PBXProject "StamSoftProizvodstvena" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4B739E942A5758B200EDAF5D;
+			productRefGroup = 4B739E9E2A5758B200EDAF5D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4B739E9C2A5758B200EDAF5D /* StamSoftProizvodstvena */,
+				4B739EAC2A5758B300EDAF5D /* StamSoftProizvodstvenaTests */,
+				4B739EB62A5758B300EDAF5D /* StamSoftProizvodstvenaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4B739E9B2A5758B200EDAF5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B739EA82A5758B300EDAF5D /* Preview Assets.xcassets in Resources */,
+				4B739EA52A5758B300EDAF5D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B739EAB2A5758B300EDAF5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B739EB52A5758B300EDAF5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4B739E992A5758B200EDAF5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B739EA32A5758B200EDAF5D /* ContentView.swift in Sources */,
+				4B739EA12A5758B200EDAF5D /* StamSoftProizvodstvenaApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B739EA92A5758B300EDAF5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B739EB22A5758B300EDAF5D /* StamSoftProizvodstvenaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B739EB32A5758B300EDAF5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B739EBC2A5758B300EDAF5D /* StamSoftProizvodstvenaUITests.swift in Sources */,
+				4B739EBE2A5758B300EDAF5D /* StamSoftProizvodstvenaUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4B739EAF2A5758B300EDAF5D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B739E9C2A5758B200EDAF5D /* StamSoftProizvodstvena */;
+			targetProxy = 4B739EAE2A5758B300EDAF5D /* PBXContainerItemProxy */;
+		};
+		4B739EB92A5758B300EDAF5D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B739E9C2A5758B200EDAF5D /* StamSoftProizvodstvena */;
+			targetProxy = 4B739EB82A5758B300EDAF5D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4B739EBF2A5758B300EDAF5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4B739EC02A5758B300EDAF5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4B739EC22A5758B300EDAF5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"StamSoftProizvodstvena/Preview Content\"";
+				DEVELOPMENT_TEAM = FRNMQFR539;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = alvg.StamSoftProizvodstvena;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4B739EC32A5758B300EDAF5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"StamSoftProizvodstvena/Preview Content\"";
+				DEVELOPMENT_TEAM = FRNMQFR539;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = alvg.StamSoftProizvodstvena;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4B739EC52A5758B300EDAF5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FRNMQFR539;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = alvg.StamSoftProizvodstvenaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StamSoftProizvodstvena.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StamSoftProizvodstvena";
+			};
+			name = Debug;
+		};
+		4B739EC62A5758B300EDAF5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FRNMQFR539;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = alvg.StamSoftProizvodstvenaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StamSoftProizvodstvena.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StamSoftProizvodstvena";
+			};
+			name = Release;
+		};
+		4B739EC82A5758B300EDAF5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FRNMQFR539;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = alvg.StamSoftProizvodstvenaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StamSoftProizvodstvena;
+			};
+			name = Debug;
+		};
+		4B739EC92A5758B300EDAF5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FRNMQFR539;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = alvg.StamSoftProizvodstvenaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StamSoftProizvodstvena;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4B739E982A5758B200EDAF5D /* Build configuration list for PBXProject "StamSoftProizvodstvena" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B739EBF2A5758B300EDAF5D /* Debug */,
+				4B739EC02A5758B300EDAF5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B739EC12A5758B300EDAF5D /* Build configuration list for PBXNativeTarget "StamSoftProizvodstvena" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B739EC22A5758B300EDAF5D /* Debug */,
+				4B739EC32A5758B300EDAF5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B739EC42A5758B300EDAF5D /* Build configuration list for PBXNativeTarget "StamSoftProizvodstvenaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B739EC52A5758B300EDAF5D /* Debug */,
+				4B739EC62A5758B300EDAF5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B739EC72A5758B300EDAF5D /* Build configuration list for PBXNativeTarget "StamSoftProizvodstvenaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B739EC82A5758B300EDAF5D /* Debug */,
+				4B739EC92A5758B300EDAF5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4B739E952A5758B200EDAF5D /* Project object */;
+}

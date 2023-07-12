@@ -100,7 +100,7 @@ struct LoginView: View {
                     }
                 }
                 .padding([.trailing, .leading])
-                .disabled(!loginVM.validInput || loginVM.authFetchStatus == .authenticating)
+                .disabled(!loginVM.validInput || loginVM.authStatus == .inProgress)
                                     
                 NavigationLink("Dont have an account? Register!") {
                     RegisterView()
@@ -108,10 +108,10 @@ struct LoginView: View {
                 .padding(.bottom)
                 
             }
-            .opacity(loginVM.authFetchStatus == .authenticating ? 0.2 : 1)
+            .opacity(loginVM.authStatus == .inProgress ? 0.2 : 1)
             
             ProgressView()
-                .opacity(loginVM.authFetchStatus == .authenticating ? 1 : 0)
+                .opacity(loginVM.authStatus == .inProgress ? 1 : 0)
         }
     }
     
@@ -135,7 +135,7 @@ struct LoginView: View {
                 .foregroundColor(.red)
                 .font(.callout)
             HStack {
-                TextField("Email", text: $loginVM.email)
+                TextField("Email", text: $loginVM.credentials.email)
                     .textInputAutocapitalization(.never)
                     .autocorrectionDisabled(true)
 
@@ -146,7 +146,7 @@ struct LoginView: View {
             .focused($focused, equals: .email)
             .animation(.default, value: focused)
 
-            PasswordField(password: $loginVM.password)
+            PasswordField(password: $loginVM.credentials.password)
             .focused($focused, equals: .password)
         }
     }

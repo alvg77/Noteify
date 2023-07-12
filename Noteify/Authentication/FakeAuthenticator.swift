@@ -9,7 +9,6 @@ import Foundation
 import Combine
 
 struct FakeAuthenticator: Authenticator {
-    typealias User = LoginModel.User
     
     func login(_ credentials: Credentials) -> AnyPublisher<User, AuthenticationError> {
         return Future() { promise in

@@ -339,5 +339,53 @@
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6FFDCEC2-3E66-4B08-81D0-A168195A7DE8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Noteify/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "ContentView_Previews"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "6FFDCEC2-3E66-4B08-81D0-A168195A7DE8 - 40a5efbd99a56d62"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StamSoftProizvodstvena.ContentView.body.getter : some"
+                  moduleName = "StamSoftProizvodstvena"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alekogeorgiev/Desktop/swift-dev/StamSoftProizvodstvena/Noteify/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "1292">
+               </Location>
+               <Location
+                  uuid = "6FFDCEC2-3E66-4B08-81D0-A168195A7DE8 - 12fb1cd076f3c7e3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StamSoftProizvodstvena.ContentView_Previews.init() -&gt; StamSoftProizvodstvena.ContentView_Previews"
+                  moduleName = "StamSoftProizvodstvena"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alekogeorgiev/Desktop/swift-dev/StamSoftProizvodstvena/Noteify/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

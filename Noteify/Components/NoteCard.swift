@@ -11,71 +11,72 @@ struct NoteCard: View {
     var dateFormatter = DateFormatter()
     var note: Note
     
-    init(note: Note) {
+    @ObservedObject var noteVM: NoteViewModel
+    
+    init(note: Note, noteVM: NoteViewModel) {
         self.note = note
+        self.noteVM = noteVM
         dateFormatter.dateFormat = "MMM d, h:mm a"
     }
     
     var body: some View {
         ZStack {
-            HStack {
-                VStack (alignment: .leading) {
-                    Text(note.title)
-                        .bold()
-                        .font(.largeTitle)
-                        .foregroundColor(.white)
-                    
-                        Text(note.body)
-                        .lineLimit(2)
-                        .foregroundColor(.white)
-                        .font(.title3)
-
-
-                    
-                    Text("\(dateFormatter.string(from: Date()))")
-                        .font(.footnote)
-                        .foregroundColor(.white)
-                        .bold()
-                }
-                
-                Spacer()
-
-                //                    Button {
-//                    } label: {
-//                        RoundedRectangle(cornerRadius: 12)
-//                            .stroke(lineWidth: 4)
-//                            .background(
-//                                RoundedRectangle(cornerRadius: 12)
-//                                    .scaleEffect(1/2)
-//                            )
-//                    }
-//                    .foregroundColor(.white)
-            }
-            .padding(.all)
+            cardContent
             .background {
-                RoundedRectangle(cornerRadius: 20)
-                    .stroke(lineWidth: 2.5)
-                    .foregroundColor(.white)
-                    .background(
-                        ZStack {
-                            Color.gray
-                                .cornerRadius(20)
-                                .opacity(0.4)
-                            LinearGradient(colors: [.orange, .purple], startPoint: .topLeading, endPoint: .bottomTrailing)
-                                .cornerRadius(20)
-                                .opacity(0.6)
-                        }
-                    )
-                    .shadow(radius: 4)
+                cardBackground
             }
         }
         .padding(.horizontal)
+    }
+    
+    @ViewBuilder var cardContent: some View {
+        HStack {
+            completeButton
+                .padding(.trailing)
+            
+            VStack (alignment: .leading) {
+                Text(note.title)
+                    .bold()
+                    .font(.largeTitle)
+                Text("\(dateFormatter.string(from: Date()))")
+                    .font(.footnote)
+                    .bold()
+                    .opacity(0.65)
+            }
+            Spacer()
+        }
+        .foregroundColor(.cyan)
+        .padding(.all)
+    }
+    
+    @ViewBuilder var completeButton: some View {
+        Button {
+            noteVM.completeNote(id: note.id)
+        } label: {
+            ZStack {
+                if note.isCompleted {
+                    Image(systemName: "checkmark.circle.fill")
+                        .scaleEffect(1.4)
+                } else {
+                    Image(systemName: "circle")
+                        .scaleEffect(1.4)
+                }
+
+            }
+        }
+    }
+
+    @ViewBuilder var cardBackground: some View {
+        RoundedRectangle(cornerRadius: 20)
+            .foregroundColor(.white)
+            .shadow(radius: 4)
     }
     
 }
 
 struct NoteCard_Previews: PreviewProvider {
     static var previews: some View {
-        NoteCard(note: Note(id: 1, title: "asd", body: "aaa", due: Date(), isCompleted: false))
+        let notevm = NoteViewModel()
+        NoteCard(note: notevm.notes[0], noteVM: NoteViewModel())
     }
 }

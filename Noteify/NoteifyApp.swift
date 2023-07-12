@@ -13,8 +13,7 @@ struct NoteifyApp: App {
     
     var body: some Scene {
         WindowGroup {
-            LoginView(loginVM: LoginViewModel())
-                .environmentObject(NoteViewModel())
+            ContentView(userManager: UserManager(authenticator: FakeAuthenticator()))
         }
     }
 }

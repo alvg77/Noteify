@@ -17,17 +17,12 @@ class NoteViewModel: ObservableObject {
         Note(id: 3, title: "asd", body: "123", due: Date(), isCompleted: false),
         Note(id: 4, title: "asd", body: "123", due: Date(), isCompleted: false),
         Note(id: 5, title: "asd", body: "123", due: Date(), isCompleted: false),
-//        NoteModel(id: 6, title: "asd", body: "123", due: Date(), isCompleted: false),
-//        NoteModel(id: 7, title: "asd", body: "123", due: Date(), isCompleted: false),
-//        NoteModel(id: 8, title: "asd", body: "123", due: Date(), isCompleted: false),
         
     ]
     
     func completeNote(id: Int) {
-        for i in notes.indices {
-            if notes[i].id == id {
-                notes[i].isCompleted.toggle()
-            }
+        if let index = notes.firstIndex(where: { $0.id == id }) {
+            notes[index].completionToggle()
         }
     }
     

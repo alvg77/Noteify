@@ -7,14 +7,15 @@
 
 import SwiftUI
 
-struct NotesView: View {
+struct NoteListView: View {
     @ObservedObject var noteVM: NoteViewModel
     @State var creating = false
+    
     var body: some View {
         ZStack {
             
             VStack {
-                LinearGradient(colors: [.orange, .purple], startPoint: .topLeading, endPoint: .bottomTrailing)
+                ThemeGradient()
                     .mask {
                         Text("Your notes")
                             .bold()
@@ -28,13 +29,6 @@ struct NotesView: View {
                 ZStack {
                     notes
                     plusButton
-                        .opacity(creating ? 0 : 1)
-                    VStack {
-                        Spacer()
-                        NoteCreationView(creating: $creating)
-                    }
-                    .transition(.move(edge: .bottom))
-                    .opacity(creating ? 1 : 0)
                 }
 
             }
@@ -47,10 +41,9 @@ struct NotesView: View {
             VStack {
                 ForEach(noteVM.notes) { note in
                     ZStack {
-                        NoteCard(note: note)
+                        NoteCard(note: note, noteVM: noteVM)
                         HStack {
                             Spacer()
-
                             VStack {
                                 Button {
                                     noteVM.completeNote(id: note.id)
@@ -59,32 +52,20 @@ struct NotesView: View {
                                         .animation(.default)
                                         .scaleEffect(2)
                                         .padding(.trailing)
-
+                                    
                                 }
                                 .padding(.trailing)
                                 .foregroundColor(.white)
                             }
                             .padding(.trailing)
                         }
-
+                        
                     }
                     .padding(.bottom)
                 }
-                invisibleElement
             }
             .padding([.top, .bottom])
         }
-    }
-    
-    @ViewBuilder var invisibleElement: some View {
-        NoteCard(note: Note(id: -1, title: "", body: "", due: Date(), isCompleted: false))
-            .opacity(0)
-    }
-    
-    @ViewBuilder var background: some View {
-        LinearGradient(colors: [.purple, .yellow], startPoint: .topLeading, endPoint: .bottomTrailing)
-            .opacity(0.4)
-            .ignoresSafeArea()
     }
     
     @ViewBuilder var plusButton: some View {
@@ -92,6 +73,7 @@ struct NotesView: View {
             Spacer()
             
             HStack {
+                Spacer()
                 Button {
                     withAnimation {
                         creating.toggle()
@@ -102,18 +84,13 @@ struct NotesView: View {
                         .padding(.all)
                         .foregroundColor(.white)
                         .background(
-                            LinearGradient(
-                                colors: [.yellow, .purple],
-                                startPoint: .topLeading,
-                                endPoint: .bottomTrailing
-                            )
-                            .mask {
                                 Circle()
-                            }
+                                    .foregroundColor(.cyan)
                         )
                         .scaleEffect(1.5)
                         .padding(.all)
                 }
+                .padding(.trailing)
                 .shadow(radius: 8)
             }
         }
@@ -122,6 +99,6 @@ struct NotesView: View {
 
 struct NotesListView_Previews: PreviewProvider {
     static var previews: some View {
-        NotesView(noteVM: NoteViewModel())
+        NoteListView(noteVM: NoteViewModel())
     }
 }

@@ -14,4 +14,8 @@ struct Note: Identifiable {
     var due: Date
     var isCompleted: Bool
     let createdAt = Date()
+    
+    mutating func completionToggle() {
+        isCompleted.toggle()
+    }
 }

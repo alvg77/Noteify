@@ -10,7 +10,7 @@ import SwiftUI
 struct ThemeGradient: View {
     var body: some View {
         LinearGradient(
-            colors: [.yellow, .purple],
+            colors: [.cyan, .blue, .mint, .green],
             startPoint: .topLeading,
             endPoint: .bottomTrailing
         )

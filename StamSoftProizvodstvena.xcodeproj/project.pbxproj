@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4B19C3202A5D60690069554F /* NoteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B19C31F2A5D60690069554F /* NoteCard.swift */; };
 		4B35AF4D2A5806AD00839B69 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B35AF4C2A5806AD00839B69 /* RegisterViewModel.swift */; };
-		4B35AF4F2A580DDD00839B69 /* ScaledThemeGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B35AF4E2A580DDD00839B69 /* ScaledThemeGradient.swift */; };
 		4B35AF5D2A58423100839B69 /* BorderedBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B35AF5C2A58423100839B69 /* BorderedBackground.swift */; };
 		4B739EA12A5758B200EDAF5D /* NoteifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B739EA02A5758B200EDAF5D /* NoteifyApp.swift */; };
 		4B739EA32A5758B200EDAF5D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B739EA22A5758B200EDAF5D /* LoginView.swift */; };
@@ -29,11 +28,13 @@
 		4B989F6E2A5DF11A00250A35 /* ProgressStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B989F6D2A5DF11A00250A35 /* ProgressStatus.swift */; };
 		4B989F742A5E029C00250A35 /* NoteCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B989F732A5E029C00250A35 /* NoteCreationView.swift */; };
 		4BA9C4D12A5E8FD7008A03AD /* ThemeGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA9C4D02A5E8FD7008A03AD /* ThemeGradient.swift */; };
-		4BA9C4D32A5EA802008A03AD /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA9C4D22A5EA802008A03AD /* LoginModel.swift */; };
+		4BA9C4D32A5EA802008A03AD /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA9C4D22A5EA802008A03AD /* UserManager.swift */; };
 		4BA9C4D52A5EC721008A03AD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA9C4D42A5EC721008A03AD /* User.swift */; };
+		4BA9C4D92A5ED045008A03AD /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA9C4D82A5ED045008A03AD /* NoteView.swift */; };
+		4BA9C4DB2A5EDFC9008A03AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA9C4DA2A5EDFC9008A03AD /* ContentView.swift */; };
 		4BFEBF6C2A5B738F007F15ED /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFEBF6B2A5B738F007F15ED /* Note.swift */; };
 		4BFEBF6E2A5B7457007F15ED /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFEBF6D2A5B7457007F15ED /* NoteViewModel.swift */; };
-		4BFEBF702A5B751D007F15ED /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFEBF6F2A5B751D007F15ED /* NotesView.swift */; };
+		4BFEBF702A5B751D007F15ED /* NoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFEBF6F2A5B751D007F15ED /* NoteListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +57,6 @@
 /* Begin PBXFileReference section */
 		4B19C31F2A5D60690069554F /* NoteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCard.swift; sourceTree = "<group>"; };
 		4B35AF4C2A5806AD00839B69 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
-		4B35AF4E2A580DDD00839B69 /* ScaledThemeGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledThemeGradient.swift; sourceTree = "<group>"; };
 		4B35AF5C2A58423100839B69 /* BorderedBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedBackground.swift; sourceTree = "<group>"; };
 		4B739E9D2A5758B200EDAF5D /* StamSoftProizvodstvena.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StamSoftProizvodstvena.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B739EA02A5758B200EDAF5D /* NoteifyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteifyApp.swift; sourceTree = "<group>"; };
@@ -79,11 +79,13 @@
 		4B989F6D2A5DF11A00250A35 /* ProgressStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressStatus.swift; sourceTree = "<group>"; };
 		4B989F732A5E029C00250A35 /* NoteCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCreationView.swift; sourceTree = "<group>"; };
 		4BA9C4D02A5E8FD7008A03AD /* ThemeGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeGradient.swift; sourceTree = "<group>"; };
-		4BA9C4D22A5EA802008A03AD /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		4BA9C4D22A5EA802008A03AD /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		4BA9C4D42A5EC721008A03AD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4BA9C4D82A5ED045008A03AD /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
+		4BA9C4DA2A5EDFC9008A03AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4BFEBF6B2A5B738F007F15ED /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		4BFEBF6D2A5B7457007F15ED /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
-		4BFEBF6F2A5B751D007F15ED /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
+		4BFEBF6F2A5B751D007F15ED /* NoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 		4B739E9F2A5758B200EDAF5D /* Noteify */ = {
 			isa = PBXGroup;
 			children = (
+				4BA9C4DC2A5EE613008A03AD /* Structs */,
 				4B989F612A5DEEB200250A35 /* Authentication */,
 				4B739EDC2A5764AE00EDAF5D /* Utilities */,
 				4B739EDA2A57648A00EDAF5D /* Styles */,
@@ -142,6 +145,7 @@
 				4B739ED72A5763E900EDAF5D /* ViewModels */,
 				4B739ED62A5763D200EDAF5D /* Views */,
 				4B739EA02A5758B200EDAF5D /* NoteifyApp.swift */,
+				4BA9C4DA2A5EDFC9008A03AD /* ContentView.swift */,
 				4B739EA42A5758B300EDAF5D /* Assets.xcassets */,
 				4B739EA62A5758B300EDAF5D /* Preview Content */,
 			);
@@ -179,7 +183,8 @@
 				4B739ED02A57599F00EDAF5D /* RegisterView.swift */,
 				4B739EA22A5758B200EDAF5D /* LoginView.swift */,
 				4B739EE32A57808C00EDAF5D /* ForgottenPassword.swift */,
-				4BFEBF6F2A5B751D007F15ED /* NotesView.swift */,
+				4BA9C4D82A5ED045008A03AD /* NoteView.swift */,
+				4BFEBF6F2A5B751D007F15ED /* NoteListView.swift */,
 				4B989F732A5E029C00250A35 /* NoteCreationView.swift */,
 			);
 			path = Views;
@@ -198,9 +203,7 @@
 		4B739ED82A5763F300EDAF5D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4BFEBF6B2A5B738F007F15ED /* Note.swift */,
-				4BA9C4D22A5EA802008A03AD /* LoginModel.swift */,
-				4BA9C4D42A5EC721008A03AD /* User.swift */,
+				4BA9C4D22A5EA802008A03AD /* UserManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -210,7 +213,6 @@
 			children = (
 				4B739EDD2A5764E200EDAF5D /* PasswordField.swift */,
 				4B19C31F2A5D60690069554F /* NoteCard.swift */,
-				4B35AF4E2A580DDD00839B69 /* ScaledThemeGradient.swift */,
 				4BA9C4D02A5E8FD7008A03AD /* ThemeGradient.swift */,
 			);
 			path = Components;
@@ -238,9 +240,18 @@
 				4B989F622A5DEECA00250A35 /* Authenticator.swift */,
 				4B989F652A5DEF7000250A35 /* FakeAuthenticator.swift */,
 				4B989F6B2A5DF02D00250A35 /* AuthenticationError.swift */,
-				4B989F692A5DEFC800250A35 /* Credentials.swift */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		4BA9C4DC2A5EE613008A03AD /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				4B989F692A5DEFC800250A35 /* Credentials.swift */,
+				4BA9C4D42A5EC721008A03AD /* User.swift */,
+				4BFEBF6B2A5B738F007F15ED /* Note.swift */,
+			);
+			path = Structs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,11 +387,10 @@
 				4B739EA32A5758B200EDAF5D /* LoginView.swift in Sources */,
 				4B19C3202A5D60690069554F /* NoteCard.swift in Sources */,
 				4BFEBF6E2A5B7457007F15ED /* NoteViewModel.swift in Sources */,
-				4BA9C4D32A5EA802008A03AD /* LoginModel.swift in Sources */,
+				4BA9C4D32A5EA802008A03AD /* UserManager.swift in Sources */,
 				4B989F662A5DEF7000250A35 /* FakeAuthenticator.swift in Sources */,
 				4B739EA12A5758B200EDAF5D /* NoteifyApp.swift in Sources */,
-				4B35AF4F2A580DDD00839B69 /* ScaledThemeGradient.swift in Sources */,
-				4BFEBF702A5B751D007F15ED /* NotesView.swift in Sources */,
+				4BFEBF702A5B751D007F15ED /* NoteListView.swift in Sources */,
 				4BFEBF6C2A5B738F007F15ED /* Note.swift in Sources */,
 				4B989F632A5DEECA00250A35 /* Authenticator.swift in Sources */,
 				4BA9C4D52A5EC721008A03AD /* User.swift in Sources */,
@@ -389,7 +399,9 @@
 				4B35AF4D2A5806AD00839B69 /* RegisterViewModel.swift in Sources */,
 				4B989F6A2A5DEFC800250A35 /* Credentials.swift in Sources */,
 				4BA9C4D12A5E8FD7008A03AD /* ThemeGradient.swift in Sources */,
+				4BA9C4D92A5ED045008A03AD /* NoteView.swift in Sources */,
 				4B739ECC2A57593400EDAF5D /* LoginViewModel.swift in Sources */,
+				4BA9C4DB2A5EDFC9008A03AD /* ContentView.swift in Sources */,
 				4B989F742A5E029C00250A35 /* NoteCreationView.swift in Sources */,
 				4B35AF5D2A58423100839B69 /* BorderedBackground.swift in Sources */,
 				4B989F6E2A5DF11A00250A35 /* ProgressStatus.swift in Sources */,

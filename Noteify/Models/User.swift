@@ -1,13 +1,13 @@
 //
-//  Credentials.swift
+//  User.swift
 //  StamSoftProizvodstvena
 //
-//  Created by Aleko Georgiev on 11.07.23.
+//  Created by Aleko Georgiev on 12.07.23.
 //
 
 import Foundation
 
-struct Credentials {
+struct User {
     var email: String
     var password: String
 }

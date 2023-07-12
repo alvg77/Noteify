@@ -7,15 +7,15 @@
 
 import Foundation
 
-enum LoginCredentialsAuthStatus {
+enum ProgressStatus {
     case idle
-    case authenticating
+    case inProgress
     
     mutating func toggle() {
         switch self {
         case .idle:
-            self = .authenticating
-        case .authenticating:
+            self = .inProgress
+        case .inProgress:
             self = .idle
         }
     }

@@ -25,11 +25,12 @@
 		4B989F632A5DEECA00250A35 /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B989F622A5DEECA00250A35 /* Authenticator.swift */; };
 		4B989F662A5DEF7000250A35 /* FakeAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B989F652A5DEF7000250A35 /* FakeAuthenticator.swift */; };
 		4B989F6A2A5DEFC800250A35 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B989F692A5DEFC800250A35 /* Credentials.swift */; };
-		4B989F6C2A5DF02D00250A35 /* WrongCredentialsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B989F6B2A5DF02D00250A35 /* WrongCredentialsError.swift */; };
-		4B989F6E2A5DF11A00250A35 /* LoginCredentialsAuthStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B989F6D2A5DF11A00250A35 /* LoginCredentialsAuthStatus.swift */; };
+		4B989F6C2A5DF02D00250A35 /* AuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B989F6B2A5DF02D00250A35 /* AuthenticationError.swift */; };
+		4B989F6E2A5DF11A00250A35 /* ProgressStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B989F6D2A5DF11A00250A35 /* ProgressStatus.swift */; };
 		4B989F742A5E029C00250A35 /* NoteCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B989F732A5E029C00250A35 /* NoteCreationView.swift */; };
 		4BA9C4D12A5E8FD7008A03AD /* ThemeGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA9C4D02A5E8FD7008A03AD /* ThemeGradient.swift */; };
 		4BA9C4D32A5EA802008A03AD /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA9C4D22A5EA802008A03AD /* LoginModel.swift */; };
+		4BA9C4D52A5EC721008A03AD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA9C4D42A5EC721008A03AD /* User.swift */; };
 		4BFEBF6C2A5B738F007F15ED /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFEBF6B2A5B738F007F15ED /* Note.swift */; };
 		4BFEBF6E2A5B7457007F15ED /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFEBF6D2A5B7457007F15ED /* NoteViewModel.swift */; };
 		4BFEBF702A5B751D007F15ED /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFEBF6F2A5B751D007F15ED /* NotesView.swift */; };
@@ -74,11 +75,12 @@
 		4B989F622A5DEECA00250A35 /* Authenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticator.swift; sourceTree = "<group>"; };
 		4B989F652A5DEF7000250A35 /* FakeAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAuthenticator.swift; sourceTree = "<group>"; };
 		4B989F692A5DEFC800250A35 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
-		4B989F6B2A5DF02D00250A35 /* WrongCredentialsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrongCredentialsError.swift; sourceTree = "<group>"; };
-		4B989F6D2A5DF11A00250A35 /* LoginCredentialsAuthStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredentialsAuthStatus.swift; sourceTree = "<group>"; };
+		4B989F6B2A5DF02D00250A35 /* AuthenticationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationError.swift; sourceTree = "<group>"; };
+		4B989F6D2A5DF11A00250A35 /* ProgressStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressStatus.swift; sourceTree = "<group>"; };
 		4B989F732A5E029C00250A35 /* NoteCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCreationView.swift; sourceTree = "<group>"; };
 		4BA9C4D02A5E8FD7008A03AD /* ThemeGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeGradient.swift; sourceTree = "<group>"; };
 		4BA9C4D22A5EA802008A03AD /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		4BA9C4D42A5EC721008A03AD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4BFEBF6B2A5B738F007F15ED /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		4BFEBF6D2A5B7457007F15ED /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
 		4BFEBF6F2A5B751D007F15ED /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 			children = (
 				4BFEBF6B2A5B738F007F15ED /* Note.swift */,
 				4BA9C4D22A5EA802008A03AD /* LoginModel.swift */,
+				4BA9C4D42A5EC721008A03AD /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 		4B739EDC2A5764AE00EDAF5D /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				4B989F6D2A5DF11A00250A35 /* ProgressStatus.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -233,8 +237,7 @@
 			children = (
 				4B989F622A5DEECA00250A35 /* Authenticator.swift */,
 				4B989F652A5DEF7000250A35 /* FakeAuthenticator.swift */,
-				4B989F6B2A5DF02D00250A35 /* WrongCredentialsError.swift */,
-				4B989F6D2A5DF11A00250A35 /* LoginCredentialsAuthStatus.swift */,
+				4B989F6B2A5DF02D00250A35 /* AuthenticationError.swift */,
 				4B989F692A5DEFC800250A35 /* Credentials.swift */,
 			);
 			path = Authentication;
@@ -380,7 +383,8 @@
 				4BFEBF702A5B751D007F15ED /* NotesView.swift in Sources */,
 				4BFEBF6C2A5B738F007F15ED /* Note.swift in Sources */,
 				4B989F632A5DEECA00250A35 /* Authenticator.swift in Sources */,
-				4B989F6C2A5DF02D00250A35 /* WrongCredentialsError.swift in Sources */,
+				4BA9C4D52A5EC721008A03AD /* User.swift in Sources */,
+				4B989F6C2A5DF02D00250A35 /* AuthenticationError.swift in Sources */,
 				4B739EDE2A5764E200EDAF5D /* PasswordField.swift in Sources */,
 				4B35AF4D2A5806AD00839B69 /* RegisterViewModel.swift in Sources */,
 				4B989F6A2A5DEFC800250A35 /* Credentials.swift in Sources */,
@@ -388,7 +392,7 @@
 				4B739ECC2A57593400EDAF5D /* LoginViewModel.swift in Sources */,
 				4B989F742A5E029C00250A35 /* NoteCreationView.swift in Sources */,
 				4B35AF5D2A58423100839B69 /* BorderedBackground.swift in Sources */,
-				4B989F6E2A5DF11A00250A35 /* LoginCredentialsAuthStatus.swift in Sources */,
+				4B989F6E2A5DF11A00250A35 /* ProgressStatus.swift in Sources */,
 				4B739ED12A57599F00EDAF5D /* RegisterView.swift in Sources */,
 				4B739EE42A57808C00EDAF5D /* ForgottenPassword.swift in Sources */,
 			);

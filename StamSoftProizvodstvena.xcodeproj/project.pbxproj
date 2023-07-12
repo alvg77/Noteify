@@ -28,10 +28,15 @@
 		4B989F6E2A5DF11A00250A35 /* ProgressStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B989F6D2A5DF11A00250A35 /* ProgressStatus.swift */; };
 		4B989F742A5E029C00250A35 /* NoteCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B989F732A5E029C00250A35 /* NoteCreationView.swift */; };
 		4BA9C4D12A5E8FD7008A03AD /* ThemeGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA9C4D02A5E8FD7008A03AD /* ThemeGradient.swift */; };
+<<<<<<< HEAD
 		4BA9C4D32A5EA802008A03AD /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA9C4D22A5EA802008A03AD /* UserManager.swift */; };
 		4BA9C4D52A5EC721008A03AD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA9C4D42A5EC721008A03AD /* User.swift */; };
 		4BA9C4D92A5ED045008A03AD /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA9C4D82A5ED045008A03AD /* NoteView.swift */; };
 		4BA9C4DB2A5EDFC9008A03AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA9C4DA2A5EDFC9008A03AD /* ContentView.swift */; };
+=======
+		4BA9C4D32A5EA802008A03AD /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA9C4D22A5EA802008A03AD /* LoginModel.swift */; };
+		4BA9C4D52A5EC721008A03AD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA9C4D42A5EC721008A03AD /* User.swift */; };
+>>>>>>> origin/dev
 		4BFEBF6C2A5B738F007F15ED /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFEBF6B2A5B738F007F15ED /* Note.swift */; };
 		4BFEBF6E2A5B7457007F15ED /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFEBF6D2A5B7457007F15ED /* NoteViewModel.swift */; };
 		4BFEBF702A5B751D007F15ED /* NoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFEBF6F2A5B751D007F15ED /* NoteListView.swift */; };
@@ -79,10 +84,15 @@
 		4B989F6D2A5DF11A00250A35 /* ProgressStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressStatus.swift; sourceTree = "<group>"; };
 		4B989F732A5E029C00250A35 /* NoteCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCreationView.swift; sourceTree = "<group>"; };
 		4BA9C4D02A5E8FD7008A03AD /* ThemeGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeGradient.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		4BA9C4D22A5EA802008A03AD /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		4BA9C4D42A5EC721008A03AD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4BA9C4D82A5ED045008A03AD /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
 		4BA9C4DA2A5EDFC9008A03AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+=======
+		4BA9C4D22A5EA802008A03AD /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		4BA9C4D42A5EC721008A03AD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+>>>>>>> origin/dev
 		4BFEBF6B2A5B738F007F15ED /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		4BFEBF6D2A5B7457007F15ED /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
 		4BFEBF6F2A5B751D007F15ED /* NoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListView.swift; sourceTree = "<group>"; };
@@ -203,7 +213,13 @@
 		4B739ED82A5763F300EDAF5D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				4BA9C4D22A5EA802008A03AD /* UserManager.swift */,
+=======
+				4BFEBF6B2A5B738F007F15ED /* Note.swift */,
+				4BA9C4D22A5EA802008A03AD /* LoginModel.swift */,
+				4BA9C4D42A5EC721008A03AD /* User.swift */,
+>>>>>>> origin/dev
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -240,6 +256,10 @@
 				4B989F622A5DEECA00250A35 /* Authenticator.swift */,
 				4B989F652A5DEF7000250A35 /* FakeAuthenticator.swift */,
 				4B989F6B2A5DF02D00250A35 /* AuthenticationError.swift */,
+<<<<<<< HEAD
+=======
+				4B989F692A5DEFC800250A35 /* Credentials.swift */,
+>>>>>>> origin/dev
 			);
 			path = Authentication;
 			sourceTree = "<group>";

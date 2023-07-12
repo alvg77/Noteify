@@ -88,7 +88,11 @@ struct LoginView: View {
                     }
                 }
                 .padding([.trailing, .leading])
+<<<<<<< HEAD
                 .disabled(!loginVM.validInput || loginVM.authInProgress)
+=======
+                .disabled(!loginVM.validInput || loginVM.authStatus == .inProgress)
+>>>>>>> origin/dev
                                     
                 NavigationLink("Dont have an account? Register!") {
                     RegisterView()
@@ -97,10 +101,17 @@ struct LoginView: View {
                 .padding(.bottom)
                 
             }
+<<<<<<< HEAD
             .opacity(loginVM.authInProgress ? 0.2 : 1)
             
             ProgressView()
                 .opacity(loginVM.authInProgress ? 1 : 0)
+=======
+            .opacity(loginVM.authStatus == .inProgress ? 0.2 : 1)
+            
+            ProgressView()
+                .opacity(loginVM.authStatus == .inProgress ? 1 : 0)
+>>>>>>> origin/dev
         }
     }
     
@@ -125,9 +136,12 @@ struct LoginView: View {
                 .foregroundColor(.red)
                 .font(.callout)
             HStack {
+<<<<<<< HEAD
                 Image(systemName: "at")
                     .foregroundColor(.black)
                 
+=======
+>>>>>>> origin/dev
                 TextField("Email", text: $loginVM.credentials.email)
                     .textInputAutocapitalization(.never)
                     .autocorrectionDisabled(true)
@@ -136,6 +150,7 @@ struct LoginView: View {
             .padding(.horizontal)
             .padding(.bottom, 8)
             .animation(.default, value: focused)
+<<<<<<< HEAD
             .overlay(
                 Rectangle()
                     .foregroundColor(.cyan)
@@ -153,6 +168,11 @@ struct LoginView: View {
                 alignment: .bottom
                 
             )
+=======
+
+            PasswordField(password: $loginVM.credentials.password)
+            .focused($focused, equals: .password)
+>>>>>>> origin/dev
         }
     }
 }

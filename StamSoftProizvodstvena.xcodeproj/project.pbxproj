@@ -11,7 +11,7 @@
 		4B35AF4D2A5806AD00839B69 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B35AF4C2A5806AD00839B69 /* RegisterViewModel.swift */; };
 		4B35AF4F2A580DDD00839B69 /* ScaledThemeGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B35AF4E2A580DDD00839B69 /* ScaledThemeGradient.swift */; };
 		4B35AF5D2A58423100839B69 /* BorderedBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B35AF5C2A58423100839B69 /* BorderedBackground.swift */; };
-		4B739EA12A5758B200EDAF5D /* StamSoftProizvodstvenaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B739EA02A5758B200EDAF5D /* StamSoftProizvodstvenaApp.swift */; };
+		4B739EA12A5758B200EDAF5D /* NoteifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B739EA02A5758B200EDAF5D /* NoteifyApp.swift */; };
 		4B739EA32A5758B200EDAF5D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B739EA22A5758B200EDAF5D /* LoginView.swift */; };
 		4B739EA52A5758B300EDAF5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B739EA42A5758B300EDAF5D /* Assets.xcassets */; };
 		4B739EA82A5758B300EDAF5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B739EA72A5758B300EDAF5D /* Preview Assets.xcassets */; };
@@ -19,14 +19,20 @@
 		4B739EBC2A5758B300EDAF5D /* StamSoftProizvodstvenaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B739EBB2A5758B300EDAF5D /* StamSoftProizvodstvenaUITests.swift */; };
 		4B739EBE2A5758B300EDAF5D /* StamSoftProizvodstvenaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B739EBD2A5758B300EDAF5D /* StamSoftProizvodstvenaUITestsLaunchTests.swift */; };
 		4B739ECC2A57593400EDAF5D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B739ECB2A57593400EDAF5D /* LoginViewModel.swift */; };
-		4B739ECE2A57595E00EDAF5D /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B739ECD2A57595E00EDAF5D /* LoginModel.swift */; };
 		4B739ED12A57599F00EDAF5D /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B739ED02A57599F00EDAF5D /* RegisterView.swift */; };
 		4B739EDE2A5764E200EDAF5D /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B739EDD2A5764E200EDAF5D /* PasswordField.swift */; };
-		4B739EE22A57761200EDAF5D /* iOSCheckboxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B739EE12A57761200EDAF5D /* iOSCheckboxToggleStyle.swift */; };
 		4B739EE42A57808C00EDAF5D /* ForgottenPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B739EE32A57808C00EDAF5D /* ForgottenPassword.swift */; };
-		4BFEBF6C2A5B738F007F15ED /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFEBF6B2A5B738F007F15ED /* NoteModel.swift */; };
+		4B989F632A5DEECA00250A35 /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B989F622A5DEECA00250A35 /* Authenticator.swift */; };
+		4B989F662A5DEF7000250A35 /* FakeAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B989F652A5DEF7000250A35 /* FakeAuthenticator.swift */; };
+		4B989F6A2A5DEFC800250A35 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B989F692A5DEFC800250A35 /* Credentials.swift */; };
+		4B989F6C2A5DF02D00250A35 /* WrongCredentialsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B989F6B2A5DF02D00250A35 /* WrongCredentialsError.swift */; };
+		4B989F6E2A5DF11A00250A35 /* LoginCredentialsAuthStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B989F6D2A5DF11A00250A35 /* LoginCredentialsAuthStatus.swift */; };
+		4B989F742A5E029C00250A35 /* NoteCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B989F732A5E029C00250A35 /* NoteCreationView.swift */; };
+		4BA9C4D12A5E8FD7008A03AD /* ThemeGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA9C4D02A5E8FD7008A03AD /* ThemeGradient.swift */; };
+		4BA9C4D32A5EA802008A03AD /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA9C4D22A5EA802008A03AD /* LoginModel.swift */; };
+		4BFEBF6C2A5B738F007F15ED /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFEBF6B2A5B738F007F15ED /* Note.swift */; };
 		4BFEBF6E2A5B7457007F15ED /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFEBF6D2A5B7457007F15ED /* NoteViewModel.swift */; };
-		4BFEBF702A5B751D007F15ED /* NotesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFEBF6F2A5B751D007F15ED /* NotesListView.swift */; };
+		4BFEBF702A5B751D007F15ED /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFEBF6F2A5B751D007F15ED /* NotesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +58,7 @@
 		4B35AF4E2A580DDD00839B69 /* ScaledThemeGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledThemeGradient.swift; sourceTree = "<group>"; };
 		4B35AF5C2A58423100839B69 /* BorderedBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedBackground.swift; sourceTree = "<group>"; };
 		4B739E9D2A5758B200EDAF5D /* StamSoftProizvodstvena.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StamSoftProizvodstvena.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4B739EA02A5758B200EDAF5D /* StamSoftProizvodstvenaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StamSoftProizvodstvenaApp.swift; sourceTree = "<group>"; };
+		4B739EA02A5758B200EDAF5D /* NoteifyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteifyApp.swift; sourceTree = "<group>"; };
 		4B739EA22A5758B200EDAF5D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		4B739EA42A5758B300EDAF5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B739EA72A5758B300EDAF5D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -62,14 +68,20 @@
 		4B739EBB2A5758B300EDAF5D /* StamSoftProizvodstvenaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StamSoftProizvodstvenaUITests.swift; sourceTree = "<group>"; };
 		4B739EBD2A5758B300EDAF5D /* StamSoftProizvodstvenaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StamSoftProizvodstvenaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4B739ECB2A57593400EDAF5D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		4B739ECD2A57595E00EDAF5D /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		4B739ED02A57599F00EDAF5D /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		4B739EDD2A5764E200EDAF5D /* PasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
-		4B739EE12A57761200EDAF5D /* iOSCheckboxToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSCheckboxToggleStyle.swift; sourceTree = "<group>"; };
 		4B739EE32A57808C00EDAF5D /* ForgottenPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgottenPassword.swift; sourceTree = "<group>"; };
-		4BFEBF6B2A5B738F007F15ED /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
+		4B989F622A5DEECA00250A35 /* Authenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticator.swift; sourceTree = "<group>"; };
+		4B989F652A5DEF7000250A35 /* FakeAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAuthenticator.swift; sourceTree = "<group>"; };
+		4B989F692A5DEFC800250A35 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		4B989F6B2A5DF02D00250A35 /* WrongCredentialsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrongCredentialsError.swift; sourceTree = "<group>"; };
+		4B989F6D2A5DF11A00250A35 /* LoginCredentialsAuthStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredentialsAuthStatus.swift; sourceTree = "<group>"; };
+		4B989F732A5E029C00250A35 /* NoteCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCreationView.swift; sourceTree = "<group>"; };
+		4BA9C4D02A5E8FD7008A03AD /* ThemeGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeGradient.swift; sourceTree = "<group>"; };
+		4BA9C4D22A5EA802008A03AD /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		4BFEBF6B2A5B738F007F15ED /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		4BFEBF6D2A5B7457007F15ED /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
-		4BFEBF6F2A5B751D007F15ED /* NotesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListView.swift; sourceTree = "<group>"; };
+		4BFEBF6F2A5B751D007F15ED /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +112,9 @@
 		4B739E942A5758B200EDAF5D = {
 			isa = PBXGroup;
 			children = (
-				4B739E9F2A5758B200EDAF5D /* StamSoftProizvodstvena */,
-				4B739EB02A5758B300EDAF5D /* StamSoftProizvodstvenaTests */,
-				4B739EBA2A5758B300EDAF5D /* StamSoftProizvodstvenaUITests */,
+				4B739E9F2A5758B200EDAF5D /* Noteify */,
+				4B739EB02A5758B300EDAF5D /* NoteifyTests */,
+				4B739EBA2A5758B300EDAF5D /* NoteifyUITests */,
 				4B739E9E2A5758B200EDAF5D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -117,21 +129,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4B739E9F2A5758B200EDAF5D /* StamSoftProizvodstvena */ = {
+		4B739E9F2A5758B200EDAF5D /* Noteify */ = {
 			isa = PBXGroup;
 			children = (
+				4B989F612A5DEEB200250A35 /* Authentication */,
 				4B739EDC2A5764AE00EDAF5D /* Utilities */,
-				4B739EDB2A5764A200EDAF5D /* Enumerations */,
 				4B739EDA2A57648A00EDAF5D /* Styles */,
 				4B739ED92A57640500EDAF5D /* Components */,
 				4B739ED82A5763F300EDAF5D /* Models */,
 				4B739ED72A5763E900EDAF5D /* ViewModels */,
 				4B739ED62A5763D200EDAF5D /* Views */,
-				4B739EA02A5758B200EDAF5D /* StamSoftProizvodstvenaApp.swift */,
+				4B739EA02A5758B200EDAF5D /* NoteifyApp.swift */,
 				4B739EA42A5758B300EDAF5D /* Assets.xcassets */,
 				4B739EA62A5758B300EDAF5D /* Preview Content */,
 			);
-			path = StamSoftProizvodstvena;
+			path = Noteify;
 			sourceTree = "<group>";
 		};
 		4B739EA62A5758B300EDAF5D /* Preview Content */ = {
@@ -142,21 +154,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		4B739EB02A5758B300EDAF5D /* StamSoftProizvodstvenaTests */ = {
+		4B739EB02A5758B300EDAF5D /* NoteifyTests */ = {
 			isa = PBXGroup;
 			children = (
 				4B739EB12A5758B300EDAF5D /* StamSoftProizvodstvenaTests.swift */,
 			);
-			path = StamSoftProizvodstvenaTests;
+			path = NoteifyTests;
 			sourceTree = "<group>";
 		};
-		4B739EBA2A5758B300EDAF5D /* StamSoftProizvodstvenaUITests */ = {
+		4B739EBA2A5758B300EDAF5D /* NoteifyUITests */ = {
 			isa = PBXGroup;
 			children = (
 				4B739EBB2A5758B300EDAF5D /* StamSoftProizvodstvenaUITests.swift */,
 				4B739EBD2A5758B300EDAF5D /* StamSoftProizvodstvenaUITestsLaunchTests.swift */,
 			);
-			path = StamSoftProizvodstvenaUITests;
+			path = NoteifyUITests;
 			sourceTree = "<group>";
 		};
 		4B739ED62A5763D200EDAF5D /* Views */ = {
@@ -165,7 +177,8 @@
 				4B739ED02A57599F00EDAF5D /* RegisterView.swift */,
 				4B739EA22A5758B200EDAF5D /* LoginView.swift */,
 				4B739EE32A57808C00EDAF5D /* ForgottenPassword.swift */,
-				4BFEBF6F2A5B751D007F15ED /* NotesListView.swift */,
+				4BFEBF6F2A5B751D007F15ED /* NotesView.swift */,
+				4B989F732A5E029C00250A35 /* NoteCreationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,8 +196,8 @@
 		4B739ED82A5763F300EDAF5D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4B739ECD2A57595E00EDAF5D /* LoginModel.swift */,
-				4BFEBF6B2A5B738F007F15ED /* NoteModel.swift */,
+				4BFEBF6B2A5B738F007F15ED /* Note.swift */,
+				4BA9C4D22A5EA802008A03AD /* LoginModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -195,6 +208,7 @@
 				4B739EDD2A5764E200EDAF5D /* PasswordField.swift */,
 				4B19C31F2A5D60690069554F /* NoteCard.swift */,
 				4B35AF4E2A580DDD00839B69 /* ScaledThemeGradient.swift */,
+				4BA9C4D02A5E8FD7008A03AD /* ThemeGradient.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -202,17 +216,9 @@
 		4B739EDA2A57648A00EDAF5D /* Styles */ = {
 			isa = PBXGroup;
 			children = (
-				4B739EE12A57761200EDAF5D /* iOSCheckboxToggleStyle.swift */,
 				4B35AF5C2A58423100839B69 /* BorderedBackground.swift */,
 			);
 			path = Styles;
-			sourceTree = "<group>";
-		};
-		4B739EDB2A5764A200EDAF5D /* Enumerations */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Enumerations;
 			sourceTree = "<group>";
 		};
 		4B739EDC2A5764AE00EDAF5D /* Utilities */ = {
@@ -220,6 +226,18 @@
 			children = (
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		4B989F612A5DEEB200250A35 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				4B989F622A5DEECA00250A35 /* Authenticator.swift */,
+				4B989F652A5DEF7000250A35 /* FakeAuthenticator.swift */,
+				4B989F6B2A5DF02D00250A35 /* WrongCredentialsError.swift */,
+				4B989F6D2A5DF11A00250A35 /* LoginCredentialsAuthStatus.swift */,
+				4B989F692A5DEFC800250A35 /* Credentials.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,19 +370,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B739EE22A57761200EDAF5D /* iOSCheckboxToggleStyle.swift in Sources */,
 				4B739EA32A5758B200EDAF5D /* LoginView.swift in Sources */,
 				4B19C3202A5D60690069554F /* NoteCard.swift in Sources */,
 				4BFEBF6E2A5B7457007F15ED /* NoteViewModel.swift in Sources */,
-				4B739ECE2A57595E00EDAF5D /* LoginModel.swift in Sources */,
-				4B739EA12A5758B200EDAF5D /* StamSoftProizvodstvenaApp.swift in Sources */,
+				4BA9C4D32A5EA802008A03AD /* LoginModel.swift in Sources */,
+				4B989F662A5DEF7000250A35 /* FakeAuthenticator.swift in Sources */,
+				4B739EA12A5758B200EDAF5D /* NoteifyApp.swift in Sources */,
 				4B35AF4F2A580DDD00839B69 /* ScaledThemeGradient.swift in Sources */,
-				4BFEBF702A5B751D007F15ED /* NotesListView.swift in Sources */,
-				4BFEBF6C2A5B738F007F15ED /* NoteModel.swift in Sources */,
+				4BFEBF702A5B751D007F15ED /* NotesView.swift in Sources */,
+				4BFEBF6C2A5B738F007F15ED /* Note.swift in Sources */,
+				4B989F632A5DEECA00250A35 /* Authenticator.swift in Sources */,
+				4B989F6C2A5DF02D00250A35 /* WrongCredentialsError.swift in Sources */,
 				4B739EDE2A5764E200EDAF5D /* PasswordField.swift in Sources */,
 				4B35AF4D2A5806AD00839B69 /* RegisterViewModel.swift in Sources */,
+				4B989F6A2A5DEFC800250A35 /* Credentials.swift in Sources */,
+				4BA9C4D12A5E8FD7008A03AD /* ThemeGradient.swift in Sources */,
 				4B739ECC2A57593400EDAF5D /* LoginViewModel.swift in Sources */,
+				4B989F742A5E029C00250A35 /* NoteCreationView.swift in Sources */,
 				4B35AF5D2A58423100839B69 /* BorderedBackground.swift in Sources */,
+				4B989F6E2A5DF11A00250A35 /* LoginCredentialsAuthStatus.swift in Sources */,
 				4B739ED12A57599F00EDAF5D /* RegisterView.swift in Sources */,
 				4B739EE42A57808C00EDAF5D /* ForgottenPassword.swift in Sources */,
 			);
@@ -524,7 +548,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"StamSoftProizvodstvena/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Noteify/Preview Content\"";
 				DEVELOPMENT_TEAM = FRNMQFR539;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -553,7 +577,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"StamSoftProizvodstvena/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Noteify/Preview Content\"";
 				DEVELOPMENT_TEAM = FRNMQFR539;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

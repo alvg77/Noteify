@@ -8,10 +8,13 @@
 import SwiftUI
 
 @main
-struct StamSoftProizvodstvenaApp: App {
+struct NoteifyApp: App {
+    
+    
     var body: some Scene {
         WindowGroup {
             LoginView(loginVM: LoginViewModel())
+                .environmentObject(NoteViewModel())
         }
     }
 }

@@ -19,7 +19,7 @@ struct LoginView: View {
     @State private var isShown = false
     @State private var navigationSelection: Bool = false
     @FocusState private var focused: FocusedField?
-    @ObservedObject var loginVM: LoginViewModel
+    @StateObject var loginVM = LoginViewModel()
     
     var body: some View {
         NavigationStack {
@@ -89,7 +89,7 @@ struct LoginView: View {
         ZStack {
             VStack {
                 Button {
-                    loginVM.login()
+//                    loginVM.login()
                 } label: {
                     ZStack {
                         Text("Log In")
@@ -100,10 +100,8 @@ struct LoginView: View {
                     }
                 }
                 .padding([.trailing, .leading])
-                .disabled(!loginVM.validInput)
-                
-                // add navigation
-                    
+                .disabled(!loginVM.validInput || loginVM.authFetchStatus == .authenticating)
+                                    
                 NavigationLink("Dont have an account? Register!") {
                     RegisterView()
                 }
@@ -132,7 +130,7 @@ struct LoginView: View {
     
     @ViewBuilder var loginInputFields: some View {
         VStack (spacing: 15) {
-            Text(loginVM.errorMessage)
+            Text("")
                 .bold()
                 .foregroundColor(.red)
                 .font(.callout)

@@ -7,22 +7,22 @@ class LoginViewModel: ObservableObject {
     @Published var userManager: UserManager
     @Published var credentials = Credentials(email: "", password: "")
     
-    init(userManager: UserManager, credentials: Credentials = Credentials(email: "", password: "")) {
+    init(userManager: UserManager) {
         self.userManager = userManager
         self.credentials = credentials
     }
     
+    private var error: AuthenticationError?
+    var authProgress: ProgressStatus = .idle
+    
     var errorMessage: String {
-        userManager.error?.errorDescription ?? ""
+        error?.errorDescription ?? ""
     }
     
     func login(){
-        userManager.login(credentials)
+        userManager.login(credentials, progress: &authProgress, error: &error)
     }
     
-    var authInProgress: Bool {
-        userManager.authProgress == .inProgress
-    }
     
     var validInput: Bool {
         validateEmail() && validatePassword()

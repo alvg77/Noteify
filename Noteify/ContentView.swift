@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var userManager: UserManager
+    @StateObject var userManager = UserManager(authenticator: FakeAuthenticator())
     
     var body: some View {
-            if !userManager.loggedIn {
-                LoginView(loginVM: LoginViewModel(userManager: userManager))
-            } else {
-                NoteListView(noteVM: NoteViewModel())
-            }
+        if !userManager.loggedIn {
+            LoginView(loginVM: LoginViewModel(userManager: userManager))
+        } else {
+            NoteListView()
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(userManager: UserManager(authenticator: FakeAuthenticator()))
+        ContentView()
     }
 }

@@ -12,7 +12,7 @@ struct LoginView: View {
     @State private var isShown = false
     @State private var navigationSelection: Bool = false
     @FocusState private var focused: FocusedField?
-    @ObservedObject var loginVM: LoginViewModel
+    @StateObject var loginVM: LoginViewModel
     
     var body: some View {
         NavigationStack {
@@ -81,7 +81,7 @@ struct LoginView: View {
                     }
                 }
                 .padding([.trailing, .leading])
-                .disabled(!loginVM.validInput || loginVM.authInProgress)
+                .disabled(!loginVM.validInput || loginVM.authProgress.inProgress)
                 
                 
                 NavigationLink("Dont have an account? Register!") {
@@ -91,10 +91,10 @@ struct LoginView: View {
                 .padding(.bottom)
                 
             }
-            .opacity(loginVM.authInProgress ? 0.2 : 1)
+            .opacity(loginVM.authProgress.inProgress ? 0.2 : 1)
             
             ProgressView()
-                .opacity(loginVM.authInProgress ? 1 : 0)
+                .opacity(loginVM.authProgress.inProgress ? 1 : 0)
         }
     }
     

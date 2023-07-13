@@ -11,7 +11,7 @@ import SwiftUI
 struct NoteifyApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(userManager: UserManager(authenticator: FakeAuthenticator()))
+            ContentView()
         }
     }
 }

@@ -8,8 +8,6 @@
 import Foundation
 
 class UserManager: ObservableObject {
-    @Published var error: AuthenticationError?
-    @Published var authProgress: ProgressStatus
     @Published var currentUser: User?
     
     var authenticator: Authenticator
@@ -18,25 +16,25 @@ class UserManager: ObservableObject {
         currentUser != nil
     }
     
-    init(error: AuthenticationError? = nil, authProgress: ProgressStatus = ProgressStatus.idle, currentUser: User? = nil, authenticator: Authenticator) {
-        self.error = error
-        self.authProgress = authProgress
-        self.currentUser = currentUser
+    init(authenticator: Authenticator) {
         self.authenticator = authenticator
     }
     
-    func login(_ credentials: Credentials) {
-        authProgress = .inProgress
+    func login(_ credentials: Credentials, progress: inout ProgressStatus, error: inout AuthenticationError?) {
+        let progressWrapper = Wrapper(progress)
+        let errorWrapper = Wrapper(error)
+        
+        progressWrapper.value = .inProgress
         var _ = authenticator
             .login(Credentials(email: credentials.email, password: credentials.password))
             .subscribe(on: DispatchQueue.main)
-            .sink { [weak self] authError in
+            .sink { [weak progressWrapper, weak errorWrapper] authError in
                 switch authError {
                 case .finished:
-                    self?.authProgress = .idle
+                    progressWrapper?.value = .idle
                 case .failure(let err):
-                    self?.error = err
-                    self?.authProgress = .idle
+                    errorWrapper?.value = err
+                    progressWrapper?.value = .idle
                 }
             } receiveValue: { [weak self] user in
                 self?.currentUser = user

@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct NoteListView: View {
-    @ObservedObject var noteVM: NoteViewModel
+    @StateObject var noteVM = NoteViewModel()
     @State var creating = false
+    
     var body: some View {
         ZStack {
             

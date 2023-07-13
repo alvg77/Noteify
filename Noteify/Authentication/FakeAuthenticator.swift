@@ -12,7 +12,7 @@ struct FakeAuthenticator: Authenticator {
     
     func login(_ credentials: Credentials) -> Future<User, AuthenticationError> {
         return Future<User, AuthenticationError> { promise in
-            DispatchQueue.global().async {
+            DispatchQueue.global().asyncAfter(deadline: .now() + 2) {
                 if credentials.email != "a@a.a" {
                     debugPrint("Invalid email")
                     promise(.failure(AuthenticationError.invalidEmail))

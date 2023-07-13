@@ -6,11 +6,13 @@
 //
 
 import Foundation
+import Combine
 
 class UserManager: ObservableObject {
     @Published var currentUser: User?
     
     var authenticator: Authenticator
+    var authPublusher: AnyCancellable?
     
     var loggedIn: Bool {
         currentUser != nil
@@ -20,22 +22,13 @@ class UserManager: ObservableObject {
         self.authenticator = authenticator
     }
     
-    func login(_ credentials: Credentials, progress: inout ProgressStatus, error: inout AuthenticationError?) {
-        let progressWrapper = Wrapper(progress)
-        let errorWrapper = Wrapper(error)
+    func login(credentials: Credentials, onCompletion: @escaping (Subscribers.Completion<AuthenticationError>) -> Void) {
         
-        progressWrapper.value = .inProgress
-        var _ = authenticator
-            .login(Credentials(email: credentials.email, password: credentials.password))
-            .subscribe(on: DispatchQueue.main)
-            .sink { [weak progressWrapper, weak errorWrapper] authError in
-                switch authError {
-                case .finished:
-                    progressWrapper?.value = .idle
-                case .failure(let err):
-                    errorWrapper?.value = err
-                    progressWrapper?.value = .idle
-                }
+        authPublusher = authenticator
+            .login(credentials)
+            .receive(on: DispatchQueue.main)
+            .sink { completion in
+                onCompletion(completion)
             } receiveValue: { [weak self] user in
                 self?.currentUser = user
             }

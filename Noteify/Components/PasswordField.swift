@@ -38,7 +38,5 @@ struct PasswordField: View {
 
             }
         }
-
-        .padding([.leading, .bottom, .trailing])
     }
 }

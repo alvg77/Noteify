@@ -15,29 +15,28 @@ struct LoginView: View {
     @StateObject var loginVM: LoginViewModel
     
     var body: some View {
-        NavigationStack {
-            ZStack {
-                background
-                VStack {
-                    Text("Noteify")
-                        .bold()
-                        .padding(.top)
-                        .foregroundColor(.white)
-                        .font(.largeTitle)
-                    Spacer()
-                    loginTitle
-                    loginInputFields
-                    forgottenPasswordButton
-                        .padding(.bottom, 40)
-                    loginButton
-                    Spacer()
-                }
-                .onSubmit {
-                    if focused == .email {
-                        focused = .password
-                    } else {
-                        focused = nil
-                    }
+        ZStack {
+            background
+            VStack {
+                Text("Noteify")
+                    .bold()
+                    .padding(.top)
+                    .foregroundColor(.white)
+                    .font(.largeTitle)
+                Spacer()
+                loginTitle
+                loginInputFields
+                forgottenPasswordButton
+                errorMessage
+                    .padding(.all)
+                loginButton
+                Spacer()
+            }
+            .onSubmit {
+                if focused == .email {
+                    focused = .password
+                } else {
+                    focused = nil
                 }
             }
         }
@@ -112,24 +111,32 @@ struct LoginView: View {
         .padding(.horizontal)
     }
     
+    @ViewBuilder var errorMessage: some View {
+        Text("\(loginVM.errorMessage)")
+            .bold()
+            .foregroundColor(.red)
+            .font(.callout)
+            .animation(.default, value: loginVM.errorMessage)
+    }
+    
     @ViewBuilder var loginInputFields: some View {
          VStack (spacing: 15) {
-             Text("")
-                 .bold()
-                 .foregroundColor(.red)
-                 .font(.callout)
-             HStack {
-                 Image(systemName: "at")
-                     .foregroundColor(.black)
-                 
-                 TextField("Email", text: $loginVM.credentials.email)
-                     .textInputAutocapitalization(.never)
-                     .autocorrectionDisabled(true)
 
+             Group {
+                 HStack {
+                     Image(systemName: "at")
+                         .foregroundColor(.black)
+                     
+                     TextField("Email", text: $loginVM.credentials.email)
+                         .textInputAutocapitalization(.never)
+                         .autocorrectionDisabled(true)
+
+                 }
+                 .animation(.default, value: focused)
+             
+                 PasswordField(password: $loginVM.credentials.password)
              }
-             .padding(.horizontal)
-             .padding(.bottom, 8)
-             .animation(.default, value: focused)
+             .padding([.horizontal, .bottom])
              .overlay(
                  Rectangle()
                      .foregroundColor(.cyan)
@@ -137,18 +144,7 @@ struct LoginView: View {
                      .frame(width: nil, height: 2),
                  alignment: .bottom
              )
-         
-             PasswordField(password: $loginVM.credentials.password)
-             .overlay(
-                 Rectangle()
-                     .foregroundColor(.cyan)
-                     .padding(.horizontal)
-                     .frame(width: nil, height: 2),
-                 alignment: .bottom
-                 
-             )
-
          }
+
      }
-        
 }

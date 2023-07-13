@@ -6,21 +6,34 @@ class LoginViewModel: ObservableObject {
     
     @Published var userManager: UserManager
     @Published var credentials = Credentials(email: "", password: "")
+    @Published var authProgress: ProgressStatus = .idle
+
+    private var error: AuthenticationError? {
+        willSet {
+            errorMessage = newValue?.errorDescription ?? ""
+        }
+    }
     
     init(userManager: UserManager) {
         self.userManager = userManager
         self.credentials = credentials
     }
+
     
-    private var error: AuthenticationError?
-    var authProgress: ProgressStatus = .idle
-    
-    var errorMessage: String {
-        error?.errorDescription ?? ""
-    }
+    @Published var errorMessage: String = ""
     
     func login(){
-        userManager.login(credentials, progress: &authProgress, error: &error)
+        authProgress = .inProgress
+        userManager.login(credentials: credentials) { [weak self] completion in
+            switch completion {
+            case .finished:
+                self?.authProgress = .idle
+            case .failure(let error):
+                self?.error = error
+                self?.authProgress = .idle
+            }
+        }
+            
     }
     
     

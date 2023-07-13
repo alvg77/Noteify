@@ -14,7 +14,9 @@ struct ContentView: View {
         if !userManager.loggedIn {
             LoginView(loginVM: LoginViewModel(userManager: userManager))
         } else {
-            NoteListView()
+            NavigationStack {
+                NoteListView()
+            }
         }
     }
 }

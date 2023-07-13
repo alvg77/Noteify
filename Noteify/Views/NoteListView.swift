@@ -13,7 +13,6 @@ struct NoteListView: View {
     
     var body: some View {
         ZStack {
-            
             VStack {
                 LinearGradient(colors: [.orange, .purple], startPoint: .topLeading, endPoint: .bottomTrailing)
                     .mask {
@@ -25,22 +24,12 @@ struct NoteListView: View {
                     }
                     .frame(maxHeight: 40)
                     .padding(.all)
-                
                 ZStack {
                     notes
                     plusButton
-                        .opacity(creating ? 0 : 1)
-                    VStack {
-                        Spacer()
-                        NoteCreationView(creating: $creating)
-                    }
-                    .transition(.move(edge: .bottom))
-                    .opacity(creating ? 1 : 0)
                 }
-
             }
         }
-        .navigationBarBackButtonHidden(true)
     }
     
     @ViewBuilder var notes: some View {
@@ -93,10 +82,8 @@ struct NoteListView: View {
             Spacer()
             
             HStack {
-                Button {
-                    withAnimation {
-                        creating.toggle()
-                    }
+                NavigationLink {
+                    NoteCreationView(creating: $creating)
                 } label: {
                     Text("+")
                         .font(.largeTitle)
@@ -115,7 +102,6 @@ struct NoteListView: View {
                         .scaleEffect(1.5)
                         .padding(.all)
                 }
-                .shadow(radius: 8)
             }
         }
     }

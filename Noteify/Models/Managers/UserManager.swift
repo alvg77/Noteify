@@ -12,7 +12,8 @@ class UserManager: ObservableObject {
     @Published var currentUser: User?
     
     var authenticator: Authenticator
-    var authPublusher: AnyCancellable?
+    private var completionPublisher: AnyPublisher<Subscribers.Completion<AuthenticationError>, Never>?
+    private var authCancellable: AnyCancellable?
     
     var loggedIn: Bool {
         currentUser != nil
@@ -22,16 +23,17 @@ class UserManager: ObservableObject {
         self.authenticator = authenticator
     }
     
-    func login(credentials: Credentials, onCompletion: @escaping (Subscribers.Completion<AuthenticationError>) -> Void) {
-        
-        authPublusher = authenticator
-            .login(credentials)
-            .receive(on: DispatchQueue.main)
-            .sink { completion in
-                onCompletion(completion)
-            } receiveValue: { [weak self] user in
-                self?.currentUser = user
-            }
+    func login(_ credentials: Credentials) -> AnyPublisher<Subscribers.Completion<AuthenticationError>, Never>? {
+        Future<Subscribers.Completion<AuthenticationError>, Never> { [weak self] promise in
+            self?.authCancellable = self?.authenticator
+                .login(credentials)
+                .receive(on: DispatchQueue.main)
+                .sink(receiveCompletion: { completion in
+                    promise(.success(completion))
+                }, receiveValue: { [weak self] user in
+                    self?.currentUser = user
+                })
+        }
+        .eraseToAnyPublisher()
     }
-    
 }

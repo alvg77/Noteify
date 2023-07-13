@@ -11,9 +11,9 @@
 		4B35AF4D2A5806AD00839B69 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B35AF4C2A5806AD00839B69 /* RegisterViewModel.swift */; };
 		4B35AF4F2A580DDD00839B69 /* ScaledThemeGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B35AF4E2A580DDD00839B69 /* ScaledThemeGradient.swift */; };
 		4B35AF5D2A58423100839B69 /* BorderedBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B35AF5C2A58423100839B69 /* BorderedBackground.swift */; };
+		4B49CF6B2A5FFA3E0068111C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B49CF6A2A5FFA3E0068111C /* Assets.xcassets */; };
 		4B739EA12A5758B200EDAF5D /* NoteifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B739EA02A5758B200EDAF5D /* NoteifyApp.swift */; };
 		4B739EA32A5758B200EDAF5D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B739EA22A5758B200EDAF5D /* LoginView.swift */; };
-		4B739EA52A5758B300EDAF5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B739EA42A5758B300EDAF5D /* Assets.xcassets */; };
 		4B739EA82A5758B300EDAF5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B739EA72A5758B300EDAF5D /* Preview Assets.xcassets */; };
 		4B739EB22A5758B300EDAF5D /* StamSoftProizvodstvenaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B739EB12A5758B300EDAF5D /* StamSoftProizvodstvenaTests.swift */; };
 		4B739EBC2A5758B300EDAF5D /* StamSoftProizvodstvenaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B739EBB2A5758B300EDAF5D /* StamSoftProizvodstvenaUITests.swift */; };
@@ -58,10 +58,11 @@
 		4B35AF4C2A5806AD00839B69 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		4B35AF4E2A580DDD00839B69 /* ScaledThemeGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledThemeGradient.swift; sourceTree = "<group>"; };
 		4B35AF5C2A58423100839B69 /* BorderedBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedBackground.swift; sourceTree = "<group>"; };
+		4B49CF672A5FF9990068111C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4B49CF6A2A5FFA3E0068111C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
 		4B739E9D2A5758B200EDAF5D /* StamSoftProizvodstvena.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StamSoftProizvodstvena.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B739EA02A5758B200EDAF5D /* NoteifyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteifyApp.swift; sourceTree = "<group>"; };
 		4B739EA22A5758B200EDAF5D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		4B739EA42A5758B300EDAF5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B739EA72A5758B300EDAF5D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4B739EAD2A5758B300EDAF5D /* StamSoftProizvodstvenaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StamSoftProizvodstvenaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B739EB12A5758B300EDAF5D /* StamSoftProizvodstvenaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StamSoftProizvodstvenaTests.swift; sourceTree = "<group>"; };
@@ -134,6 +135,7 @@
 		4B739E9F2A5758B200EDAF5D /* Noteify */ = {
 			isa = PBXGroup;
 			children = (
+				4B49CF6A2A5FFA3E0068111C /* Assets.xcassets */,
 				4B989F612A5DEEB200250A35 /* Authentication */,
 				4B739EDC2A5764AE00EDAF5D /* Utilities */,
 				4B739EDA2A57648A00EDAF5D /* Styles */,
@@ -142,7 +144,6 @@
 				4B739ED72A5763E900EDAF5D /* ViewModels */,
 				4B739ED62A5763D200EDAF5D /* Views */,
 				4B739EA02A5758B200EDAF5D /* NoteifyApp.swift */,
-				4B739EA42A5758B300EDAF5D /* Assets.xcassets */,
 				4B739EA62A5758B300EDAF5D /* Preview Content */,
 			);
 			path = Noteify;
@@ -151,6 +152,7 @@
 		4B739EA62A5758B300EDAF5D /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				4B49CF672A5FF9990068111C /* Assets.xcassets */,
 				4B739EA72A5758B300EDAF5D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -347,8 +349,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B49CF6B2A5FFA3E0068111C /* Assets.xcassets in Resources */,
 				4B739EA82A5758B300EDAF5D /* Preview Assets.xcassets in Resources */,
-				4B739EA52A5758B300EDAF5D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

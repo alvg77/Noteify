@@ -8,6 +8,6 @@
 import Foundation
 
 struct User {
-    var email: String
-    var password: String
+    let id: Int
+    let email: String
 }

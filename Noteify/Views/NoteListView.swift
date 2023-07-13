@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NotesView: View {
+struct NoteListView: View {
     @ObservedObject var noteVM: NoteViewModel
     @State var creating = false
     var body: some View {
@@ -122,6 +122,6 @@ struct NotesView: View {
 
 struct NotesListView_Previews: PreviewProvider {
     static var previews: some View {
-        NotesView(noteVM: NoteViewModel())
+        NoteListView(noteVM: NoteViewModel())
     }
 }

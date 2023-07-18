@@ -16,11 +16,7 @@ class NoteViewModel: ObservableObject {
         Note(id: 2, title: "asd", body: "123", due: Date(), isCompleted: false),
         Note(id: 3, title: "asd", body: "123", due: Date(), isCompleted: false),
         Note(id: 4, title: "asd", body: "123", due: Date(), isCompleted: false),
-        Note(id: 5, title: "asd", body: "123", due: Date(), isCompleted: false),
-//        NoteModel(id: 6, title: "asd", body: "123", due: Date(), isCompleted: false),
-//        NoteModel(id: 7, title: "asd", body: "123", due: Date(), isCompleted: false),
-//        NoteModel(id: 8, title: "asd", body: "123", due: Date(), isCompleted: false),
-        
+        Note(id: 5, title: "asd", body: "123", due: Date(), isCompleted: false),        
     ]
     
     func completeNote(id: Int) {

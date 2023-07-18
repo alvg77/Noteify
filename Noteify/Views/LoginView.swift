@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  StamSoftProizvodstvena
-//
-//  Created by Aleko Georgiev on 6.07.23.
-//
-
 import SwiftUI
 import Combine
 
@@ -19,77 +12,64 @@ struct LoginView: View {
     @State private var isShown = false
     @State private var navigationSelection: Bool = false
     @FocusState private var focused: FocusedField?
-    @StateObject var loginVM = LoginViewModel()
+    @StateObject var loginVM: LoginViewModel
     
     var body: some View {
-        NavigationStack {
-            ZStack {
-                background
-                VStack {
-                    Text("Noteify")
-                        .bold()
-                        .padding(.top)
-                        .foregroundColor(.white)
-                        .font(.largeTitle)
-                    Spacer()
-                    loginTitle
-                    loginInputFields
-                    forgottenPasswordButton
-                        .padding(.bottom, 40)
-                    loginButton
-                    Spacer()
-                }
-                .onSubmit {
-                    if focused == .email {
-                        focused = .password
-                    } else {
-                        focused = nil
-                    }
+        ZStack {
+            background
+            VStack {
+                Text("Noteify")
+                    .bold()
+                    .padding(.top)
+                    .foregroundColor(.white)
+                    .font(.largeTitle)
+                Spacer()
+                loginTitle
+                loginInputFields
+                forgottenPasswordButton
+                errorMessage
+                    .padding(.all)
+                loginButton
+                Spacer()
+            }
+            .onSubmit {
+                if focused == .email {
+                    focused = .password
+                } else {
+                    focused = nil
                 }
             }
         }
     }
     
     @ViewBuilder var loginTitle: some View {
-        LinearGradient(
-            colors: [.yellow, .purple],
-            startPoint: .topLeading,
-            endPoint: .bottomTrailing
-        )
-        .mask {
-            Text("Welcome back!")
-                .font(.title)
-                .bold()
-                .frame(maxWidth: .infinity, alignment: .center)
-                .padding(.leading)
-        }
-        .frame(maxHeight: 25)
-        .padding(.bottom)
+        Text("Welcome back!")
+            .font(.largeTitle)
+            .bold()
+            .frame(maxWidth: .infinity, alignment: .center)
+            .padding(.leading)
+            .foregroundColor(.cyan)
     }
     
     @ViewBuilder var background: some View {
-        LinearGradient(
-            colors: [.purple, .yellow],
-            startPoint: .topLeading,
-            endPoint: .bottomTrailing
-        )
-        .ignoresSafeArea()
+        ThemeGradient()
+            .ignoresSafeArea()
 
         Circle()
             .scale(1.5)
             .foregroundColor(.white.opacity(0.15))
+        
         Circle()
             .scale(1.3)
-            .foregroundColor(.white)
             .shadow(radius: 12)
-
+            .foregroundColor(.white)
     }
     
     @ViewBuilder var loginButton: some View {
         ZStack {
             VStack {
                 Button {
-//                    loginVM.login()
+                    loginVM.login()
                 } label: {
                     ZStack {
                         Text("Log In")
@@ -100,18 +80,20 @@ struct LoginView: View {
                     }
                 }
                 .padding([.trailing, .leading])
-                .disabled(!loginVM.validInput || loginVM.authStatus == .inProgress)
-                                    
+                .disabled(!loginVM.validInput || loginVM.authProgress.inProgress)
+                
+                
                 NavigationLink("Dont have an account? Register!") {
                     RegisterView()
                 }
+                .foregroundColor(.cyan)
                 .padding(.bottom)
                 
             }
-            .opacity(loginVM.authStatus == .inProgress ? 0.2 : 1)
+            .opacity(loginVM.authProgress.inProgress ? 0.2 : 1)
             
             ProgressView()
-                .opacity(loginVM.authStatus == .inProgress ? 1 : 0)
+                .opacity(loginVM.authProgress.inProgress ? 1 : 0)
         }
     }
     
@@ -121,6 +103,7 @@ struct LoginView: View {
             NavigationLink("Forgotten password") {
                 ForgottenPassword()
             }
+            .foregroundColor(.cyan)
             .font(.footnote)
             .bold()
             .padding(.trailing)
@@ -128,33 +111,40 @@ struct LoginView: View {
         .padding(.horizontal)
     }
     
+    @ViewBuilder var errorMessage: some View {
+        Text("\(loginVM.errorMessage)")
+            .bold()
+            .foregroundColor(.red)
+            .font(.callout)
+            .animation(.default, value: loginVM.errorMessage)
+    }
+    
     @ViewBuilder var loginInputFields: some View {
-        VStack (spacing: 15) {
-            Text("")
-                .bold()
-                .foregroundColor(.red)
-                .font(.callout)
-            HStack {
-                TextField("Email", text: $loginVM.credentials.email)
-                    .textInputAutocapitalization(.never)
-                    .autocorrectionDisabled(true)
+         VStack (spacing: 15) {
 
-                Image(systemName: "envelope")
-            }
-            .borderedBackground(lineWidth: focused == .email ? 2 : 1, shadowRadius: focused == .email ? 4 : 0)
-            .padding(.horizontal)
-            .focused($focused, equals: .email)
-            .animation(.default, value: focused)
+             Group {
+                 HStack {
+                     Image(systemName: "at")
+                         .foregroundColor(.black)
+                     
+                     TextField("Email", text: $loginVM.credentials.email)
+                         .textInputAutocapitalization(.never)
+                         .autocorrectionDisabled(true)
 
-            PasswordField(password: $loginVM.credentials.password)
-            .focused($focused, equals: .password)
-        }
-    }
+                 }
+                 .animation(.default, value: focused)
+             
+                 PasswordField(password: $loginVM.credentials.password)
+             }
+             .padding([.horizontal, .bottom])
+             .overlay(
+                 Rectangle()
+                     .foregroundColor(.cyan)
+                     .padding(.horizontal)
+                     .frame(width: nil, height: 2),
+                 alignment: .bottom
+             )
+         }
 
-}
-
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView(loginVM: LoginViewModel())
-    }
+     }
 }

@@ -22,7 +22,6 @@ struct NoteCreationView: View {
     @Binding var creating: Bool
     
     @FocusState var selected: SelectedField?
-    @EnvironmentObject var noteVM: NoteViewModel
     
     var body: some View {
         VStack {

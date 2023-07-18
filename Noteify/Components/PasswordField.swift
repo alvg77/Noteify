@@ -20,6 +20,7 @@ struct PasswordField: View {
     
     var body: some View {
         HStack {
+            Image(systemName: "lock")
             ZStack {
                 TextField("Password", text: $password)
                     .opacity(isShown ? 1 : 0)
@@ -37,10 +38,5 @@ struct PasswordField: View {
 
             }
         }
-        .borderedBackground(lineWidth: focused == .hidden ? 2 : 1, shadowRadius: focused == .hidden ? 4 : 0)
-
-        .padding([.leading, .bottom, .trailing])
     }
-    
-        
 }

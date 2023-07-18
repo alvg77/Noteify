@@ -19,9 +19,9 @@ struct ContentView: View {
                         .navigationDestination(for: String.self, destination: { destination in
                             switch destination {
                             case "login":
-                                LoginView(navigationPath: $navigationPath, loginVM: LoginViewModel(userManager: userManager))
+                                LoginView(navigationPath: $navigationPath, loginVM: LoginViewModel(usersManager: userManager))
                             case "register":
-                                RegisterView(navigationPath: $navigationPath, registerVM: RegisterViewModel(userManager: userManager))
+                                RegisterView(navigationPath: $navigationPath, registerVM: RegisterViewModel(usersManager: userManager))
                             default:
                                 EmptyView()
                             }

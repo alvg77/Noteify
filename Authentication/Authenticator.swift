@@ -9,7 +9,6 @@ import Foundation
 import Combine
 
 protocol Authenticator {
-
     func login(_ credentials: Credentials) -> AnyPublisher<User, AuthenticationError>
-//    func register(_ credentials: Credentials) async throws -> AnyPublisher<User, any Error>
+    func register(_ credentials: Credentials) -> AnyPublisher<User, RegistrationError>
 }

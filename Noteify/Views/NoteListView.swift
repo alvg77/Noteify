@@ -75,10 +75,9 @@ struct NoteListView: View {
     @ViewBuilder var notes: some View {
         List {
             ForEach(noteVM.notes) { note in
-                NoteCard(note: note) { () in
+                NoteCard(note: note) {
                     self.noteVM.updateCompletion(id: note.id)
                 }
- 
             }
             .onDelete { indexSet in
                 for i in indexSet {

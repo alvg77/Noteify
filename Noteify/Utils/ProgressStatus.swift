@@ -19,4 +19,13 @@ enum ProgressStatus {
             self = .idle
         }
     }
+    
+    var inProgress: Bool {
+        switch self {
+        case .idle:
+            return false
+        case .inProgress:
+            return true
+        }
+    }
 }

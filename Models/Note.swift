@@ -8,10 +8,10 @@
 import Foundation
 
 struct Note: Identifiable {
-    var id: Int
+    var id: String
     var title: String
     var body: String
     var due: Date
-    var isCompleted: Bool
-    let createdAt = Date()
+    var isCompleted = false
+    var createdAt = Date()
 }

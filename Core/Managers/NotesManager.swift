@@ -38,11 +38,11 @@ class NotesManager: ObservableObject {
                         let id = queryDocumentSnapshot.documentID
                         let title = data["title"] as? String ?? ""
                         let body = data["body"] as? String ?? ""
-                        let due = data["due"] as! Timestamp
+                        let due = data["due"] as? Timestamp
                         let isCompleted = data["isCompleted"] as? Bool ?? false
                         let createdAt = data["createdAt"] as? Date ?? Date()
                         
-                        return Note(id: id, title: title, body: body, due: due.dateValue(), isCompleted: isCompleted, createdAt: createdAt)
+                        return Note(id: id, title: title, body: body, due: due?.dateValue(), isCompleted: isCompleted, createdAt: createdAt)
                     }
                 )
             }
@@ -57,16 +57,19 @@ class NotesManager: ObservableObject {
         let id = UUID().uuidString
         let ref = db.collection("Notes").document(id)
         if let currentUser {
-            ref.setData(
-                [
-                    "title": note.title,
-                    "body": note.body,
-                    "due": note.due,
-                    "createdAt": note.createdAt,
-                    "isCompleted": note.isCompleted,
-                    "ownerEmail": currentUser.email
-                ]
-            ) { error in
+            var data = [
+                "title": note.title,
+                "body": note.body,
+                "createdAt": note.createdAt,
+                "isCompleted": note.isCompleted,
+                "ownerEmail": currentUser.email
+            ] as [String : Any]
+            
+            if let due = note.due {
+                data["due"] = due
+            }
+            
+            ref.setData(data) { error in
                 if let error {
                     debugPrint("\(error.localizedDescription)")
                 }
@@ -78,12 +81,17 @@ class NotesManager: ObservableObject {
         let db = Firestore.firestore()
         let ref = db.collection("Notes").document(note.id)
         
-        ref.updateData([
+        var data = [
             "title": note.title,
             "body": note.body,
-            "due": note.due,
             "isCompleted": note.isCompleted
-        ]) { error in
+        ] as [String : Any]
+        
+        if let due = note.due {
+            data["due"] = note.due
+        }
+        
+        ref.updateData(data) { error in
             if let error {
                 debugPrint("\(error.localizedDescription)")
             }

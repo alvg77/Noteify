@@ -26,7 +26,7 @@ struct NoteCard: View {
                 VStack (alignment: .leading) {
                     Text(note.title)
                         .bold()
-                        .font(.largeTitle)
+                        .font(.title)
                         .foregroundColor(Color("color.theme"))
                     
                     Text(note.body)
@@ -34,25 +34,27 @@ struct NoteCard: View {
                         .foregroundColor(Color("color.theme"))
                         .font(.title3)
                     
-                    Divider()
-                        .frame(height: 2)
-                        .overlay(Color("color.theme"))
-                    
-                    HStack {
-                        Image(systemName: "calendar")
-                            .font(.body)
-                        Text("\(dateFormatter.string(from: Date()))")
-                            .font(.footnote)
+                    if note.due != nil {
+                        Divider()
+                            .frame(height: 2)
+                            .overlay(Color("color.theme"))
+                        
+                        HStack {
+                            Image(systemName: "calendar")
+                                .font(.body)
+                            Text("\(dateFormatter.string(from: note.due!))")
+                                .font(.footnote)
+                        }
+                        .foregroundColor(Color("color.theme"))
+                        .fontWeight(.heavy)
                     }
-                    .foregroundColor(Color("color.theme"))
-                    .fontWeight(.heavy)
+
                 }
                 Spacer()
             }
             .padding(.all)
         }
         .fontDesign(.rounded)
-        .padding(.horizontal)
     }
     
     @ViewBuilder var completeButton: some View {

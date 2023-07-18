@@ -108,12 +108,32 @@ struct NewNoteView: View {
     }
     
     @ViewBuilder var datePicker: some View {
-        DatePicker("DUE", selection: $noteVM.note.due)
-            .padding(.horizontal)
-            .fontWeight(.heavy)
-            .foregroundColor(Color("color.theme"))
-            .tint(Color("color.theme"))
-            .padding(.horizontal)
-            .focused($selected, equals: .due)
+        VStack {
+            Toggle("Due Date", isOn: $noteVM.hasDueDate)
+                .tint(Color("color.theme"))
+                .padding(.all)
+                .padding(.horizontal)
+                .background(
+                    RoundedRectangle(cornerRadius: 4)
+                        .foregroundColor(Color("color.element"))
+                        .padding(.horizontal)
+                )
+                
+            
+                DatePicker("DUE", selection: $noteVM.due)
+                    .fontWeight(.heavy)
+                    .foregroundColor(Color("color.theme"))
+                    .tint(Color("color.theme"))
+                    .padding(.horizontal)
+                    .focused($selected, equals: .due)
+                    .scaleEffect(0.9)
+                    .background(
+                        RoundedRectangle(cornerRadius: 4)
+                            .foregroundColor(Color("color.element"))
+                            .padding(.horizontal)
+                    )
+                    .opacity(!noteVM.hasDueDate ? 0.5 : 1)
+                    .disabled(!noteVM.hasDueDate)
+        }
     }
 }

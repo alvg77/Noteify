@@ -11,7 +11,7 @@ struct Note: Identifiable {
     var id: String
     var title: String
     var body: String
-    var due: Date
+    var due: Date?
     var isCompleted = false
     var createdAt = Date()
 }

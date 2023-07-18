@@ -9,10 +9,24 @@ import Foundation
 
 class NewNoteViewModel: ObservableObject {
     @Published var noteManager: NotesManager
-    @Published var note = Note(id: "", title: "", body: "", due: Date())
+    @Published var note = Note(id: "", title: "", body: "")
+    
+    @Published var hasDueDate = false {
+        willSet {
+            if newValue == false {
+                note.due = nil
+            }
+        }
+    }
+    
+    @Published var due = Date() {
+        willSet {
+            note.due = newValue
+        }
+    }
     
     var isValid: Bool {
-        !note.title.isEmpty && Date() < note.due
+        !note.title.isEmpty && ((hasDueDate && note.due != nil && Date() < note.due!) || (!hasDueDate && note.due == nil))
     }
     
     init(noteManager: NotesManager) {
@@ -20,7 +34,6 @@ class NewNoteViewModel: ObservableObject {
     }
     
     func addNote(currentUser: User?) {
-        debugPrint(note.due)
         noteManager.addNote(currentUser: currentUser, note: note)
         refreshNote()
     }

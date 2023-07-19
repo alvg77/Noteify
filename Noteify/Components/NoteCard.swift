@@ -48,7 +48,6 @@ struct NoteCard: View {
                         .foregroundColor(Color("color.theme"))
                         .fontWeight(.heavy)
                     }
-
                 }
                 Spacer()
             }

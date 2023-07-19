@@ -21,15 +21,14 @@ struct NoteListView: View {
                 .ignoresSafeArea()
             VStack {
                 heading
-                    .padding(.top)
+                    .padding([.top, .leading])
                     .frame(height: 64)
                 if noteVM.notes.isEmpty {
                     noNotes
                 } else {
                     notes
                 }
-            }
-            VStack {
+     
                 Spacer()
                 plusButton
             }
@@ -84,27 +83,29 @@ struct NoteListView: View {
                     noteVM.deleteNote(index: i)
                 }
             }
-            .listRowSeparator(.hidden)
         }
     }
     
     @ViewBuilder var plusButton: some View {
-        HStack {
-            Spacer()
-            Button {
-                creating.toggle()
-            } label: {
+        Button {
+            creating.toggle()
+        } label: {
+            HStack {
                 ZStack {
                     Circle()
-                        .frame(width: 64)
                         .foregroundColor(Color("color.theme"))
+                        .frame(width: 32)
                     Image(systemName: "plus")
                         .foregroundColor(.white)
-                        .font(.system(size: 32, weight: .heavy))
+                        .font(.title3)
                 }
+                Text("Add a note")
+                    .font(.title3)
+                    .fontWeight(.heavy)
             }
-            .padding(.all)
+
         }
+        .padding(.all)
         .foregroundColor(Color("color.theme"))
     }
 }

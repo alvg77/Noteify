@@ -100,14 +100,9 @@ struct NewNoteView: View {
             TextField("Note title", text: $noteVM.note.title)
                 .focused($selected, equals: .title)
             TextField("Note body", text: $noteVM.note.body, axis: .vertical)
-                .lineLimit(5, reservesSpace: true)
                 .focused($selected, equals: .body)
         }
         .padding(.all)
-        .background(
-            RoundedRectangle(cornerRadius: 4)
-                .foregroundColor(Color("color.element"))
-        )
         .padding(.horizontal)
         .font(.title3)
     }
@@ -118,11 +113,6 @@ struct NewNoteView: View {
                 .tint(Color("color.theme"))
                 .padding(.all)
                 .padding(.horizontal)
-                .background(
-                    RoundedRectangle(cornerRadius: 4)
-                        .foregroundColor(Color("color.element"))
-                        .padding(.horizontal)
-                )
                 
             
                 DatePicker("DUE", selection: $noteVM.due)
@@ -132,11 +122,6 @@ struct NewNoteView: View {
                     .padding(.horizontal)
                     .focused($selected, equals: .due)
                     .scaleEffect(0.9)
-                    .background(
-                        RoundedRectangle(cornerRadius: 4)
-                            .foregroundColor(Color("color.element"))
-                            .padding(.horizontal)
-                    )
                     .opacity(!noteVM.hasDueDate ? 0.5 : 1)
                     .disabled(!noteVM.hasDueDate)
         }

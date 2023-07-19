@@ -54,6 +54,7 @@ struct NoteCard: View {
             }
             .padding(.all)
         }
+        .opacity(note.isCompleted ? 0.4 : 1)
         .fontDesign(.rounded)
     }
     

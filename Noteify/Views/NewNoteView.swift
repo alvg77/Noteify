@@ -26,18 +26,23 @@ struct NewNoteView: View {
         ZStack {
             Color("color.background")
                 .ignoresSafeArea()
-            ScrollView {
-                VStack {
-                    buttons
-                        .padding(.all)
-                    title
-                        .padding(.all)
-                    inputFields
-                    datePicker
-                    Spacer()
+            VStack {
+                buttons
+                    .padding(.all)
+                title
+                    .padding(.all)
+                Form {
+                    Section {
+                        inputFields
+                    }
+                    
+                    Section {
+                        datePicker
+                    }
+                        
                 }
             }
-            
+
         }
         .fontDesign(.rounded)
         .toolbar {
@@ -48,7 +53,7 @@ struct NewNoteView: View {
                 }
             }
         }
-        
+
     }
     
     @ViewBuilder var buttons: some View {

@@ -64,7 +64,7 @@ struct RegisterView: View {
             .bold()
             .frame(maxWidth: .infinity, alignment: .center)
             .padding(.leading)
-            .foregroundColor(Color("color.theme"))
+            .foregroundColor(.accentColor)
     }
     
     @ViewBuilder var header: some View {
@@ -72,7 +72,7 @@ struct RegisterView: View {
             Text("Register")
                 .font(.system(size: 54, weight: .heavy))
                 .fontWeight(.heavy)
-                .foregroundColor(Color("color.theme"))
+                .foregroundColor(.accentColor)
         }
     }
     
@@ -98,7 +98,7 @@ struct RegisterView: View {
                     }
                 }
                 .padding([.trailing, .leading])
-                .foregroundColor(Color("color.theme"))
+                .foregroundColor(.accentColor)
                 .opacity(inactive ? 0.4 : 1)
                 .disabled(inactive)
 
@@ -127,7 +127,7 @@ struct RegisterView: View {
         Button("Already have an account? Tap here to login!") {
             navigationPath.append("login")
         }
-        .foregroundColor(Color("color.theme"))
+        .foregroundColor(.accentColor)
     }
 
     
@@ -161,7 +161,7 @@ struct RegisterView: View {
             if helpSelection && focused == .none {
                 Text("Passwords should include:\n- at least 6 characters\n- at least one english letter\n- at least one number\n- at least one special character")
                     .lineLimit(5, reservesSpace: true)
-                    .foregroundColor(Color("color.theme"))
+                    .foregroundColor(.accentColor)
                     .padding(.all)
                     .background(
                         RoundedRectangle(cornerRadius: 4)

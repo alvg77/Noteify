@@ -39,7 +39,7 @@ struct ContentView: View {
                     .environmentObject(userManager)
             }
         }
-        .tint(Color("color.theme"))
+        .tint(.accentColor)
     }
 }
 

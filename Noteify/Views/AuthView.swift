@@ -31,11 +31,11 @@ struct AuthView: View {
     @ViewBuilder var floatingCircle: some View {
         VStack {
             Circle()
-                .foregroundColor(Color("color.theme"))
+                .foregroundColor(.accentColor)
                 .offset(x: -200, y: -200)
             Spacer()
             Circle()
-                .foregroundColor(Color("color.theme"))
+                .foregroundColor(.accentColor)
                 .offset(x: 200, y:200)
         }
     }
@@ -44,9 +44,9 @@ struct AuthView: View {
         VStack {
             Text("Noteify")
                 .font(.system(size: 80, weight: .heavy))
-                .foregroundColor(Color("color.theme"))
+                .foregroundColor(.accentColor)
             Text("Organize your life!")
-                .foregroundColor(Color("color.theme"))
+                .foregroundColor(.accentColor)
                 .font(.body)
         }
         .bold()
@@ -72,7 +72,7 @@ struct AuthView: View {
             .padding(.all)
             .background(
                 RoundedRectangle(cornerRadius: 4)
-                    .foregroundColor(Color("color.theme"))
+                    .foregroundColor(.accentColor)
             )
             
         }

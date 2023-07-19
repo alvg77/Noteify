@@ -27,17 +27,17 @@ struct NoteCard: View {
                     Text(note.title)
                         .bold()
                         .font(.title)
-                        .foregroundColor(Color("color.theme"))
+                        .foregroundColor(.accentColor)
                     
                     Text(note.body)
                         .lineLimit(2)
-                        .foregroundColor(Color("color.theme"))
+                        .foregroundColor(.accentColor)
                         .font(.title3)
                     
                     if note.due != nil {
                         Divider()
                             .frame(height: 2)
-                            .overlay(Color("color.theme"))
+                            .overlay(Color.accentColor)
                         
                         HStack {
                             Image(systemName: "calendar")
@@ -45,7 +45,7 @@ struct NoteCard: View {
                             Text("\(dateFormatter.string(from: note.due!))")
                                 .font(.footnote)
                         }
-                        .foregroundColor(Color("color.theme"))
+                        .foregroundColor(.accentColor)
                         .fontWeight(.heavy)
                     }
                 }
@@ -63,7 +63,7 @@ struct NoteCard: View {
         } label: {
             Image(systemName: note.isCompleted ? "checkmark.circle.fill" : "circle")
                 .font(.title)
-                .foregroundColor(Color("color.theme"))
+                .foregroundColor(.accentColor)
         }
     }
     

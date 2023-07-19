@@ -49,7 +49,7 @@ struct NoteListView: View {
                 .fontWeight(.heavy)
                 .font(.largeTitle)
                 .bold()
-                .foregroundColor(Color("color.theme"))
+                .foregroundColor(.accentColor)
             Spacer()
         }
         .padding(.all)
@@ -67,7 +67,7 @@ struct NoteListView: View {
             Spacer()
         }
         .fontWeight(.heavy)
-        .foregroundColor(Color("color.theme"))
+        .foregroundColor(.accentColor)
         .opacity(0.66)
     }
     
@@ -93,7 +93,7 @@ struct NoteListView: View {
             HStack {
                 ZStack {
                     Circle()
-                        .foregroundColor(Color("color.theme"))
+                        .foregroundColor(.accentColor)
                         .frame(width: 32)
                     Image(systemName: "plus")
                         .foregroundColor(.white)
@@ -106,6 +106,6 @@ struct NoteListView: View {
 
         }
         .padding(.all)
-        .foregroundColor(Color("color.theme"))
+        .foregroundColor(.accentColor)
     }
 }

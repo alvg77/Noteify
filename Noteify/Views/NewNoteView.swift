@@ -92,7 +92,7 @@ struct NewNoteView: View {
         Text("Create note")
             .font(.system(size: 44, weight: .heavy))
             .bold()
-            .foregroundColor(Color("color.theme"))
+            .foregroundColor(.accentColor)
     }
     
     @ViewBuilder var inputFields: some View {
@@ -110,15 +110,15 @@ struct NewNoteView: View {
     @ViewBuilder var datePicker: some View {
         VStack {
             Toggle("Due Date", isOn: $noteVM.hasDueDate)
-                .tint(Color("color.theme"))
+                .tint(.accentColor)
                 .padding(.all)
                 .padding(.horizontal)
                 
             
                 DatePicker("DUE", selection: $noteVM.due)
                     .fontWeight(.heavy)
-                    .foregroundColor(Color("color.theme"))
-                    .tint(Color("color.theme"))
+                    .foregroundColor(.accentColor)
+                    .tint(.accentColor)
                     .padding(.horizontal)
                     .focused($selected, equals: .due)
                     .scaleEffect(0.9)

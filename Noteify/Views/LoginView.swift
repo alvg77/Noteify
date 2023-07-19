@@ -65,14 +65,14 @@ struct LoginView: View {
             .bold()
             .frame(maxWidth: .infinity, alignment: .center)
             .padding(.leading)
-            .foregroundColor(Color("color.theme"))
+            .foregroundColor(.accentColor)
     }
     
     @ViewBuilder private var header: some View {
         VStack {
             Text("Login")
                 .font(.system(size: 54, weight: .heavy))
-                .foregroundColor(Color("color.theme"))
+                .foregroundColor(.accentColor)
         }
     }
     
@@ -98,7 +98,7 @@ struct LoginView: View {
                     }
                 }
                 .padding([.trailing, .leading])
-                .foregroundColor(Color("color.theme"))
+                .foregroundColor(.accentColor)
                 .opacity(inactive ? 0.4 : 1)
                 .disabled(inactive)
                 
@@ -114,7 +114,7 @@ struct LoginView: View {
         Button("Don't have an account? Register today!") {
             navigationPath.append("register")
         }
-        .foregroundColor(Color("color.theme"))
+        .foregroundColor(.accentColor)
     }
     
     @ViewBuilder private var errorMessage: some View {

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct NoteListView: View {
     @EnvironmentObject var userManager: UsersManager
@@ -57,6 +58,10 @@ struct NoteListView: View {
                 .bold()
                 .foregroundColor(.accentColor)
             Spacer()
+            Button("Logout") {
+                try? Auth.auth().signOut()
+                userManager.currentUser = nil
+            }
         }
         .padding(.all)
     }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B0DABE12A6941C800FFDE9E /* DetailsNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0DABE02A6941C800FFDE9E /* DetailsNoteViewModel.swift */; };
 		4B49CF6B2A5FFA3E0068111C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B49CF6A2A5FFA3E0068111C /* Assets.xcassets */; };
 		4B4F722A2A66D709008B4025 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B4F721D2A66D708008B4025 /* GoogleService-Info.plist */; };
 		4B4F72302A66D709008B4025 /* NoteifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4F72232A66D709008B4025 /* NoteifyApp.swift */; };
@@ -35,11 +36,12 @@
 		4B4F726D2A66DE98008B4025 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4F726C2A66DE98008B4025 /* RegisterView.swift */; };
 		4B4F726F2A66DE9B008B4025 /* NewNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4F726E2A66DE9B008B4025 /* NewNoteView.swift */; };
 		4B4F72712A66DEA0008B4025 /* NoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4F72702A66DEA0008B4025 /* NoteListView.swift */; };
-		4B4F72732A66DEA3008B4025 /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4F72722A66DEA3008B4025 /* NoteView.swift */; };
+		4B4F72732A66DEA3008B4025 /* DetailsNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4F72722A66DEA3008B4025 /* DetailsNoteView.swift */; };
 		4B739EA82A5758B300EDAF5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B739EA72A5758B300EDAF5D /* Preview Assets.xcassets */; };
 		4B739EB22A5758B300EDAF5D /* StamSoftProizvodstvenaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B739EB12A5758B300EDAF5D /* StamSoftProizvodstvenaTests.swift */; };
 		4B739EBC2A5758B300EDAF5D /* StamSoftProizvodstvenaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B739EBB2A5758B300EDAF5D /* StamSoftProizvodstvenaUITests.swift */; };
 		4B739EBE2A5758B300EDAF5D /* StamSoftProizvodstvenaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B739EBD2A5758B300EDAF5D /* StamSoftProizvodstvenaUITestsLaunchTests.swift */; };
+		4BF1A7442A681A7300C80895 /* NoteForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF1A7432A681A7300C80895 /* NoteForm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B0DABE02A6941C800FFDE9E /* DetailsNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsNoteViewModel.swift; sourceTree = "<group>"; };
 		4B49CF672A5FF9990068111C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B49CF6A2A5FFA3E0068111C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
 		4B4F721D2A66D708008B4025 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../noteify-copy/Noteify/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -87,7 +90,7 @@
 		4B4F726C2A66DE98008B4025 /* RegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		4B4F726E2A66DE9B008B4025 /* NewNoteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewNoteView.swift; sourceTree = "<group>"; };
 		4B4F72702A66DEA0008B4025 /* NoteListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteListView.swift; sourceTree = "<group>"; };
-		4B4F72722A66DEA3008B4025 /* NoteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
+		4B4F72722A66DEA3008B4025 /* DetailsNoteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsNoteView.swift; sourceTree = "<group>"; };
 		4B739E9D2A5758B200EDAF5D /* StamSoftProizvodstvena.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StamSoftProizvodstvena.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B739EA72A5758B300EDAF5D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4B739EAD2A5758B300EDAF5D /* StamSoftProizvodstvenaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StamSoftProizvodstvenaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +98,7 @@
 		4B739EB72A5758B300EDAF5D /* StamSoftProizvodstvenaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StamSoftProizvodstvenaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B739EBB2A5758B300EDAF5D /* StamSoftProizvodstvenaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StamSoftProizvodstvenaUITests.swift; sourceTree = "<group>"; };
 		4B739EBD2A5758B300EDAF5D /* StamSoftProizvodstvenaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StamSoftProizvodstvenaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4BF1A7432A681A7300C80895 /* NoteForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteForm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +176,7 @@
 				4B4F72592A66DE10008B4025 /* NoteListViewModel.swift */,
 				4B4F725B2A66DE14008B4025 /* RegisterViewModel.swift */,
 				4B4F72552A66DE06008B4025 /* LoginViewModel.swift */,
+				4B0DABE02A6941C800FFDE9E /* DetailsNoteViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -182,6 +187,7 @@
 				4B4F72602A66DE36008B4025 /* NoteCard.swift */,
 				4B4F72622A66DE3A008B4025 /* PasswordField.swift */,
 				4B4F725E2A66DE33008B4025 /* EmailField.swift */,
+				4BF1A7432A681A7300C80895 /* NoteForm.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -201,7 +207,7 @@
 				4B4F726A2A66DE92008B4025 /* LoginView.swift */,
 				4B4F726C2A66DE98008B4025 /* RegisterView.swift */,
 				4B4F726E2A66DE9B008B4025 /* NewNoteView.swift */,
-				4B4F72722A66DEA3008B4025 /* NoteView.swift */,
+				4B4F72722A66DEA3008B4025 /* DetailsNoteView.swift */,
 				4B4F72702A66DEA0008B4025 /* NoteListView.swift */,
 			);
 			path = Views;
@@ -416,13 +422,15 @@
 				4B4F72712A66DEA0008B4025 /* NoteListView.swift in Sources */,
 				4B4F723F2A66DB6A008B4025 /* FirebaseAuthenticator.swift in Sources */,
 				4B4F72382A66D8F2008B4025 /* ContentView.swift in Sources */,
+				4BF1A7442A681A7300C80895 /* NoteForm.swift in Sources */,
 				4B4F723D2A66DB45008B4025 /* Authenticator.swift in Sources */,
 				4B4F72482A66DBC0008B4025 /* Credentials.swift in Sources */,
 				4B4F72692A66DE8E008B4025 /* AuthView.swift in Sources */,
 				4B4F723B2A66DAFB008B4025 /* AuthenticationError.swift in Sources */,
 				4B4F72612A66DE36008B4025 /* NoteCard.swift in Sources */,
 				4B4F725F2A66DE33008B4025 /* EmailField.swift in Sources */,
-				4B4F72732A66DEA3008B4025 /* NoteView.swift in Sources */,
+				4B4F72732A66DEA3008B4025 /* DetailsNoteView.swift in Sources */,
+				4B0DABE12A6941C800FFDE9E /* DetailsNoteViewModel.swift in Sources */,
 				4B4F72662A66DE4D008B4025 /* ProgressStatus.swift in Sources */,
 				4B4F726D2A66DE98008B4025 /* RegisterView.swift in Sources */,
 				4B4F724C2A66DC12008B4025 /* User.swift in Sources */,

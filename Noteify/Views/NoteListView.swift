@@ -13,7 +13,9 @@ struct NoteListView: View {
     @Binding var navigationPath: NavigationPath
     @StateObject var noteVM: NoteListViewModel
     @StateObject var notesManager: NotesManager
-    @State private var creating =  false
+    @State private var creating = false
+    @State private var detailsNote: Note?
+
     
     var body: some View {
         ZStack {
@@ -38,6 +40,10 @@ struct NoteListView: View {
             NewNoteView(noteVM: NewNoteViewModel(noteManager: notesManager))
                 .interactiveDismissDisabled(true)
         }
+        .sheet(item: $detailsNote) { detailsNote in
+            DetailsNoteView(noteVM: DetailsNoteViewModel(notesManager: notesManager, note: detailsNote))
+        }
+        
         .onAppear {
             noteVM.fetchNotes(currentUser: userManager.currentUser)
         }
@@ -74,8 +80,15 @@ struct NoteListView: View {
     @ViewBuilder var notes: some View {
         List {
             ForEach(noteVM.notes) { note in
-                NoteCard(note: note) {
-                    self.noteVM.updateCompletion(id: note.id)
+                ZStack {
+                    NoteCard(note: note) {
+                        self.noteVM.updateCompletion(id: note.id)
+                    }
+                    
+                    HStack {
+                        Spacer()
+                        infoButton(note: note)
+                    }
                 }
             }
             .onDelete { indexSet in
@@ -84,6 +97,16 @@ struct NoteListView: View {
                 }
             }
         }
+    }
+    
+    @ViewBuilder func infoButton(note: Note) -> some View {
+        Button {
+            detailsNote = note
+        } label: {
+            Image(systemName: "info.circle.fill")
+                .font(.title2)
+        }
+        .buttonStyle(BorderlessButtonStyle())
     }
     
     @ViewBuilder var plusButton: some View {

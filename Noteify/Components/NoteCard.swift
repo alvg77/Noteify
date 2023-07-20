@@ -11,33 +11,29 @@ struct NoteCard: View {
     var dateFormatter = DateFormatter()
     var note: Note
     var onComplete: () -> Void
-    
     init(note: Note, onComplete: @escaping () -> Void) {
         self.note = note
         self.onComplete = onComplete
-        
         dateFormatter.dateFormat = "MMM d, h:mm a"
     }
     
     var body: some View {
-        ZStack {
+            
             HStack {
                 completeButton
                 VStack (alignment: .leading) {
                     Text(note.title)
                         .bold()
-                        .font(.title)
+                        .font(.title3)
                         .foregroundColor(.accentColor)
                     
                     Text(note.body)
                         .lineLimit(2)
                         .foregroundColor(.accentColor)
-                        .font(.title3)
+                        .font(.body)
+                        .padding(.bottom)
                     
                     if note.due != nil {
-                        Divider()
-                            .frame(height: 2)
-                            .overlay(Color.accentColor)
                         
                         HStack {
                             Image(systemName: "calendar")
@@ -51,8 +47,7 @@ struct NoteCard: View {
                 }
                 Spacer()
             }
-            .padding(.all)
-        }
+
         .opacity(note.isCompleted ? 0.4 : 1)
         .fontDesign(.rounded)
     }
@@ -65,8 +60,10 @@ struct NoteCard: View {
                 .font(.title)
                 .foregroundColor(.accentColor)
         }
+        .buttonStyle(BorderlessButtonStyle())
     }
     
+
 }
 
 struct NoteCard_Previews: PreviewProvider {

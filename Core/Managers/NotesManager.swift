@@ -51,7 +51,6 @@ class NotesManager: ObservableObject {
         return publisher.eraseToAnyPublisher()
     }
     
-    
     func addNote(currentUser: User?, note: Note) {
         let db = Firestore.firestore()
         let id = UUID().uuidString
@@ -88,7 +87,7 @@ class NotesManager: ObservableObject {
         ] as [String : Any]
         
         if let due = note.due {
-            data["due"] = note.due
+            data["due"] = due
         }
         
         ref.updateData(data) { error in

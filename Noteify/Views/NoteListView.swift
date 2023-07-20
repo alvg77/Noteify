@@ -42,6 +42,7 @@ struct NoteListView: View {
         }
         .sheet(item: $detailsNote) { detailsNote in
             DetailsNoteView(noteVM: DetailsNoteViewModel(notesManager: notesManager, note: detailsNote))
+                .interactiveDismissDisabled(true)
         }
         .onAppear {
             noteVM.fetchNotes(currentUser: userManager.currentUser)

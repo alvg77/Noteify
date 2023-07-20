@@ -52,34 +52,25 @@ struct NoteForm: View {
     }
     
     var body: some View {
-        NavigationView {
-            ZStack {
-                Color("color.background")
-                    .ignoresSafeArea()
-                VStack {
-                    topper
-                        .padding(.all)
-                    Form {
-                        Section {
-                            inputFields
-                        }
-                        Section {
-                            datePicker
-                        }
+        ZStack {
+            Color("color.background")
+                .ignoresSafeArea()
+            VStack {
+                topper
+                    .padding(.all)
+                Form {
+                    Section {
+                        inputFields
                     }
-                   
-                }
-            }
-            .toolbar {
-                ToolbarItemGroup(placement: .keyboard) {
-                    Spacer()
-                    Button("Done") {
-                        selected = .none
+                    Section {
+                        datePicker
                     }
                 }
+                .scrollDismissesKeyboard(.interactively)
             }
-            .fontDesign(.rounded)
         }
+        .fontDesign(.rounded)
+        
     }
     
     @ViewBuilder var topper: some View {

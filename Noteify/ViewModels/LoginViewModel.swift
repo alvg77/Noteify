@@ -1,10 +1,3 @@
-//
-//  LoginViewModel.swift
-//  StamSoftProizvodstvena
-//
-//  Created by Aleko Georgiev on 6.07.23.
-//
-
 import Foundation
 import Combine
 
@@ -25,6 +18,7 @@ class LoginViewModel: ObservableObject {
     init(usersManager: UsersManager) {
         self.usersManager = usersManager
     }
+    
     
     var validInput: Bool {
         validateEmail() && validatePassword()

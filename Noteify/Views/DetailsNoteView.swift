@@ -24,8 +24,6 @@ struct DetailsNoteView: View {
     var body: some View {
         NoteForm(heading: "Details", note: $noteVM.note, due: $noteVM.due, shouldAlert: $noteVM.changed, closeAlert: closeAlert) {
             noteVM.updateNote()
-        } onCancel: {
-            debugPrint("closing")
         }
     }
     
@@ -35,6 +33,7 @@ struct DetailsNoteView: View {
             message: Text("Are you sure you want to discard edits on the note?"),
             primaryButton: .default(Text("Cancel")),
             secondaryButton: .destructive(Text("Close")) {
+                
                 dismiss()
             }
         )

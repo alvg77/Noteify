@@ -38,16 +38,14 @@ struct NoteForm: View {
     private var timeFormatter = DateFormatter()
     
     private var onComplete: () -> Void
-    private var onCancel: () -> Void
     private var completeDisableCondition: Bool
     private let closeAlert: Alert
         
-    init(heading: String, note: Binding<Note>, completeDisableCondition: Bool = false, due:  Binding<Date>, shouldAlert: Binding<Bool> = Binding.constant(true), closeAlert: Alert, onComplete: @escaping ()->Void, onCancel: @escaping ()->Void) {
+    init(heading: String, note: Binding<Note>, completeDisableCondition: Bool = false, due:  Binding<Date>, shouldAlert: Binding<Bool> = Binding.constant(true), closeAlert: Alert, onComplete: @escaping ()->Void) {
         self._note = note
         self._due = due
         self.headingValue = heading
         self.closeAlert = closeAlert
-        self.onCancel = onCancel
         self.onComplete = onComplete
         self.completeDisableCondition = completeDisableCondition
         self._shouldAlert = shouldAlert
@@ -89,7 +87,6 @@ struct NoteForm: View {
     @ViewBuilder var buttons: some View {
         HStack {
             Button("Close") {
-                onCancel()
                 isConfirmingClose = true && shouldAlert
                 if !isConfirmingClose {
                     dismiss()

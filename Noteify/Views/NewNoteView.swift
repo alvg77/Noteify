@@ -25,8 +25,6 @@ struct NewNoteView: View {
     var body: some View {
         NoteForm(heading: "New Note", note: $noteVM.note, completeDisableCondition: !noteVM.isValid, due: $noteVM.due, closeAlert: closeAlert) {
             noteVM.addNote(currentUser: userManager.currentUser)
-        } onCancel: {
-            noteVM.refreshNote()
         }
     }
     
@@ -37,6 +35,7 @@ struct NewNoteView: View {
             primaryButton: .default(Text("Cancel")),
             secondaryButton: .destructive(Text("Close")) {
                 dismiss()
+                noteVM.refreshNote()
             }
         )
     }

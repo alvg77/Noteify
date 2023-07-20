@@ -11,7 +11,6 @@ import Firebase
 struct NoteListView: View {
     @EnvironmentObject var userManager: UsersManager
     
-    @Binding var navigationPath: NavigationPath
     @StateObject var noteVM: NoteListViewModel
     @StateObject var notesManager: NotesManager
     @State private var creating = false

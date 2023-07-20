@@ -35,7 +35,7 @@ struct ContentView: View {
                         }
             } else {
                 let notesManager = NotesManager()
-                NoteListView(navigationPath: $navigationPath, noteVM: NoteListViewModel(noteManager: notesManager), notesManager: notesManager)
+                NoteListView(noteVM: NoteListViewModel(noteManager: notesManager), notesManager: notesManager)
                     .environmentObject(userManager)
                     
             }

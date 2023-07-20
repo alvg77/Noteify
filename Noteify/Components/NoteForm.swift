@@ -130,27 +130,28 @@ struct NoteForm: View {
         Toggle(isOn: $isOnDate.animation()) {
             HStack {
                 Image(systemName: "calendar")
-                VStack (alignment: .leading) {
+                VStack(alignment: .leading) {
                     Text("Date")
                     if isOnDate {
                         Text("\(dateFormatter.string(from: due))")
-                        
+                            .foregroundColor(.accentColor)
                     }
                 }
             }
+            .frame(height: 36)
             .transaction { transaction in
                 transaction.animation = nil
             }
         }
         .onChange(of: isOnDate) { newValue in
-            withAnimation {
                 if !newValue {
                     isOnTime = false
                     hiddenDate = true
                 } else if !isOnTime {
-                    hiddenDate = false
+                    withAnimation {
+                        hiddenDate = false
+                    }
                 }
-            }
         }
         .onTapGesture {
             if isOnDate {
@@ -163,25 +164,27 @@ struct NoteForm: View {
                 }
             }
         }
-        
-        
+
         if isOnDate && !hiddenDate {
             DatePicker("Due Date", selection: $due, displayedComponents: .date)
                 .datePickerStyle(.graphical)
-                .transition(.opacity)
+            .transition(.opacity)
         }
-        
-        
+
+
         Toggle(isOn: $isOnTime.animation()) {
             HStack {
                 Image(systemName: "clock")
-                VStack (alignment: .leading) {
+                VStack(alignment: .leading) {
                     Text("Time")
                     if isOnTime {
                         Text("\(timeFormatter.string(from: due))")
+                            .foregroundColor(.accentColor)
                     }
                 }
             }
+            .frame(height: 36)
+
             .transaction { transaction in
                 transaction.animation = nil
             }
@@ -194,20 +197,20 @@ struct NoteForm: View {
                         hiddenDate = true
                     }
                     hiddenTime = !newValue
+
                 }
+
             }
         }
         .onTapGesture {
             if isOnTime {
                 withAnimation {
-                    if !hiddenDate {
-                        hiddenDate.toggle()
-                    }
+                    hiddenDate = true
                     hiddenTime.toggle()
                 }
             }
         }
-        
+
         if isOnTime && !hiddenTime {
             DatePicker("Due Time", selection: $due, displayedComponents: [.hourAndMinute])
                 .datePickerStyle(.wheel)

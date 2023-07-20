@@ -26,7 +26,7 @@ class NewNoteViewModel: ObservableObject {
     }
     
     var isValid: Bool {
-        !note.title.isEmpty && ((hasDueDate && note.due != nil && Date() < note.due!) || (!hasDueDate && note.due == nil))
+        !note.title.isEmpty
     }
     
     init(noteManager: NotesManager) {

@@ -27,20 +27,21 @@ struct NoteCard: View {
                         .font(.title3)
                         .foregroundColor(.accentColor)
                     
-                    Text(note.body)
-                        .lineLimit(2)
-                        .foregroundColor(.accentColor)
-                        .font(.body)
-                        .padding(.bottom)
-                    
+                    if !note.body.isEmpty {
+                        Text(note.body)
+                            .lineLimit(2)
+                            .foregroundColor(.accentColor)
+                            .font(.body)
+                    }
+
                     if note.due != nil {
-                        
                         HStack {
                             Image(systemName: "calendar")
                                 .font(.body)
                             Text("\(dateFormatter.string(from: note.due!))")
                                 .font(.footnote)
                         }
+                        .padding(.top, 1)
                         .foregroundColor(.accentColor)
                         .fontWeight(.heavy)
                     }

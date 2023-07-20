@@ -19,7 +19,6 @@ struct NewNoteView: View {
     @EnvironmentObject var userManager: UsersManager
     
     @StateObject var noteVM: NewNoteViewModel
-    @FocusState var selected: SelectedField?
     @State var isConfirmingClose: Bool = false
     
     var body: some View {

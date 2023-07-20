@@ -43,7 +43,6 @@ struct NoteListView: View {
         .sheet(item: $detailsNote) { detailsNote in
             DetailsNoteView(noteVM: DetailsNoteViewModel(notesManager: notesManager, note: detailsNote))
         }
-        
         .onAppear {
             noteVM.fetchNotes(currentUser: userManager.currentUser)
         }

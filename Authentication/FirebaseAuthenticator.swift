@@ -15,7 +15,6 @@ struct FirebaseAuthenticator: Authenticator {
     func login(_ credentials: Credentials) -> AnyPublisher<User, AuthenticationError> {
         Future<User, AuthenticationError> { promise in
             Auth.auth().signIn(withEmail: credentials.email, password: credentials.password) { result, error in
-                debugPrint("hiiiiii")
                 if let error = error as? NSError {
                     switch error.code {
                     case AuthErrorCode.userNotFound.rawValue:
@@ -26,7 +25,6 @@ struct FirebaseAuthenticator: Authenticator {
                         promise(.failure(AuthenticationError.unknown))
                     }
                 } else if let user = result?.user {
-                    debugPrint("yello")
                     promise(.success(User(id: user.uid, email: user.email ?? "")))
                 } else {
                     promise(.failure(AuthenticationError.unknown))

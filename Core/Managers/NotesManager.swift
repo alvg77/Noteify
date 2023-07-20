@@ -19,9 +19,6 @@ class NotesManager: ObservableObject {
             let ref = db.collection("Notes").whereField("ownerEmail", isEqualTo: currentUser.email)
             ref.addSnapshotListener { snapshot, error in
                 guard error == nil else {
-                    /*------------------------------*/
-                    // TODO: handle errors adequately
-                    /*------------------------------*/
                     debugPrint("\(error!.localizedDescription)")
                     return
                 }

@@ -106,6 +106,7 @@ struct NoteListView: View {
             Image(systemName: "info.circle.fill")
                 .font(.title2)
         }
+        .disabled(note.isCompleted)
         .buttonStyle(BorderlessButtonStyle())
     }
     

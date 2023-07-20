@@ -37,6 +37,7 @@ struct ContentView: View {
                 let notesManager = NotesManager()
                 NoteListView(navigationPath: $navigationPath, noteVM: NoteListViewModel(noteManager: notesManager), notesManager: notesManager)
                     .environmentObject(userManager)
+                    
             }
         }
         .tint(.accentColor)

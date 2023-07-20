@@ -33,7 +33,6 @@ struct DetailsNoteView: View {
             message: Text("Are you sure you want to discard edits on the note?"),
             primaryButton: .default(Text("Cancel")),
             secondaryButton: .destructive(Text("Close")) {
-                
                 dismiss()
             }
         )

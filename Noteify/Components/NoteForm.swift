@@ -11,7 +11,6 @@ struct NoteForm: View {
     enum SelectedField {
         case title
         case body
-        case due
     }
     
     @Environment(\.dismiss) var dismiss
@@ -19,7 +18,6 @@ struct NoteForm: View {
     var headingValue: String
     
     @FocusState var selected: SelectedField?
-    
     
     @Namespace var datePickerAnimation
     
@@ -58,9 +56,7 @@ struct NoteForm: View {
             Color("color.background")
                 .ignoresSafeArea()
             VStack {
-                buttons
-                    .padding(.all)
-                heading
+                topper
                     .padding(.all)
                 Form {
                     Section {
@@ -73,18 +69,9 @@ struct NoteForm: View {
             }
         }
         .fontDesign(.rounded)
-        .toolbar {
-            ToolbarItemGroup(placement: .keyboard) {
-                Spacer()
-                Button("Done") {
-                    selected = .none
-                }
-            }
-        }
-        
     }
     
-    @ViewBuilder var buttons: some View {
+    @ViewBuilder var topper: some View {
         HStack {
             Button("Close") {
                 isConfirmingClose = true && shouldAlert
@@ -98,6 +85,10 @@ struct NoteForm: View {
             
             Spacer()
             
+            title
+            
+            Spacer()
+            
             Button("Done") {
                 onComplete()
                 dismiss()
@@ -107,10 +98,9 @@ struct NoteForm: View {
         
     }
     
-    @ViewBuilder var heading: some View {
+    @ViewBuilder var title: some View {
         Text(headingValue)
-            .font(.system(size: 44, weight: .heavy))
-            .bold()
+            .fontWeight(.heavy)
             .foregroundColor(.accentColor)
     }
     

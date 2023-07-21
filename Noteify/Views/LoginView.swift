@@ -6,31 +6,29 @@ struct LoginView: View {
     enum FocusedField {
         case email
         case password
-        case button
     }
+    
+    @Binding var navigationPath: NavigationPath
     
     @State private var isShown = false
     @State private var navigationSelection: Bool = false
     @FocusState private var focused: FocusedField?
     @StateObject var loginVM: LoginViewModel
-    
+        
     var body: some View {
         ZStack {
-            background
+            Color("color.background")
+                .ignoresSafeArea()
             VStack {
-                Text("Noteify")
-                    .bold()
-                    .padding(.top)
-                    .foregroundColor(.white)
-                    .font(.largeTitle)
-                Spacer()
-                loginTitle
+                header
+                .padding(.bottom, 64)
+                
                 loginInputFields
-                forgottenPasswordButton
                 errorMessage
                     .padding(.all)
+                
                 loginButton
-                Spacer()
+                register
             }
             .onSubmit {
                 if focused == .email {
@@ -40,111 +38,106 @@ struct LoginView: View {
                 }
             }
         }
+        .bold()
+        .fontDesign(.rounded)
+        .toolbar {
+            ToolbarItemGroup(placement: .keyboard) {
+                Spacer()
+                Button("Done") {
+                    focused = .none
+                }
+            }
+        }
+        .ignoresSafeArea(.keyboard)
+
     }
-    
-    @ViewBuilder var loginTitle: some View {
+
+    @ViewBuilder private var loginTitle: some View {
         Text("Welcome back!")
             .font(.largeTitle)
             .bold()
             .frame(maxWidth: .infinity, alignment: .center)
             .padding(.leading)
-            .foregroundColor(.cyan)
+            .foregroundColor(.accentColor)
     }
     
-    @ViewBuilder var background: some View {
-        ThemeGradient()
-            .ignoresSafeArea()
-
-        Circle()
-            .scale(1.5)
-            .foregroundColor(.white.opacity(0.15))
-        
-        Circle()
-            .scale(1.3)
-            .shadow(radius: 12)
-            .foregroundColor(.white)
+    @ViewBuilder private var header: some View {
+        VStack {
+            Text("Login")
+                .font(.system(size: 54, weight: .heavy))
+                .foregroundColor(.accentColor)
+        }
     }
     
-    @ViewBuilder var loginButton: some View {
+    @ViewBuilder private var loginButton: some View {
+        let inactive = !loginVM.validInput || loginVM.authStatus.inProgress
         ZStack {
             VStack {
                 Button {
-                    loginVM.login()
+                    loginVM.login() {
+                        navigationPath = NavigationPath()
+                    }
                 } label: {
                     ZStack {
-                        Text("Log In")
+                        Text("Login")
                             .foregroundColor(.white)
                             .padding(.all)
-                            .frame(maxWidth: .infinity)
-                            .background(RoundedRectangle(cornerRadius: .infinity))
+                            .frame(maxWidth: 170)
+                            .background(
+                                RoundedRectangle(cornerRadius: .infinity)
+                                    .shadow(radius: inactive ? 0 : 2 , y: inactive ? 0 : 4)
+                            )
+                            .padding(.all)
                     }
                 }
                 .padding([.trailing, .leading])
-                .disabled(!loginVM.validInput || loginVM.authProgress.inProgress)
-                
-                
-                NavigationLink("Dont have an account? Register!") {
-                    RegisterView()
-                }
-                .foregroundColor(.cyan)
-                .padding(.bottom)
+                .foregroundColor(.accentColor)
+                .opacity(inactive ? 0.4 : 1)
+                .disabled(inactive)
                 
             }
-            .opacity(loginVM.authProgress.inProgress ? 0.2 : 1)
-            
+            .opacity(loginVM.authStatus.inProgress ? 0.2 : 1)
+
             ProgressView()
-                .opacity(loginVM.authProgress.inProgress ? 1 : 0)
+                .opacity(loginVM.authStatus.inProgress ? 1 : 0)
         }
     }
     
-    @ViewBuilder var forgottenPasswordButton: some View {
+    @ViewBuilder private var register: some View {
+        Button("Don't have an account? Register today!") {
+            navigationPath.append("register")
+        }
+        .foregroundColor(.accentColor)
+    }
+    
+    @ViewBuilder private var errorMessage: some View {
         HStack {
-            Spacer()
-            NavigationLink("Forgotten password") {
-                ForgottenPassword()
+            if loginVM.error != nil {
+                Image(systemName: "exclamationmark.triangle")
             }
-            .foregroundColor(.cyan)
-            .font(.footnote)
-            .bold()
-            .padding(.trailing)
+            Text("\(loginVM.errorMessage)")
+                .bold()
+                .font(.callout)
+                .animation(.default, value: loginVM.errorMessage)
         }
-        .padding(.horizontal)
+        .foregroundColor(.red)
     }
     
-    @ViewBuilder var errorMessage: some View {
-        Text("\(loginVM.errorMessage)")
-            .bold()
-            .foregroundColor(.red)
-            .font(.callout)
-            .animation(.default, value: loginVM.errorMessage)
+    @ViewBuilder private var loginInputFields: some View {
+        VStack (spacing: 15) {
+            Group {
+                EmailField(email: $loginVM.credentials.email)
+                    .focused($focused, equals: .email)
+                PasswordField(title: "Password", password: $loginVM.credentials.password)
+                    .focused($focused, equals: .password)
+            }
+                .padding(.all)
+                .background(
+                    RoundedRectangle(cornerRadius: 4)
+                        .padding(.horizontal)
+                        .foregroundColor(Color("color.element"))
+                )
+                .animation(.default, value: focused)
+        }
     }
-    
-    @ViewBuilder var loginInputFields: some View {
-         VStack (spacing: 15) {
-
-             Group {
-                 HStack {
-                     Image(systemName: "at")
-                         .foregroundColor(.black)
-                     
-                     TextField("Email", text: $loginVM.credentials.email)
-                         .textInputAutocapitalization(.never)
-                         .autocorrectionDisabled(true)
-
-                 }
-                 .animation(.default, value: focused)
-             
-                 PasswordField(password: $loginVM.credentials.password)
-             }
-             .padding([.horizontal, .bottom])
-             .overlay(
-                 Rectangle()
-                     .foregroundColor(.cyan)
-                     .padding(.horizontal)
-                     .frame(width: nil, height: 2),
-                 alignment: .bottom
-             )
-         }
-
-     }
 }

@@ -14,6 +14,7 @@ struct PasswordField: View {
         case shown
     }
     
+    let title: String
     @Binding var password: String
     @FocusState var focused: TextFieldFocus?
     @State var isShown = false
@@ -21,12 +22,13 @@ struct PasswordField: View {
     var body: some View {
         HStack {
             Image(systemName: "lock")
+                .foregroundColor(.primary)
             ZStack {
-                TextField("Password", text: $password)
+                TextField(title, text: $password)
                     .opacity(isShown ? 1 : 0)
                     .focused($focused, equals: .shown)
                 
-                SecureField("Password", text: $password)
+                SecureField(title, text: $password)
                     .opacity(isShown ? 0 : 1)
                     .focused($focused, equals: .hidden)
             }
@@ -35,8 +37,10 @@ struct PasswordField: View {
             } label: {
                 Image(systemName: isShown ? "eye" : "eye.slash")
                     .animation(.default)
-
+                    .foregroundColor(.primary)
             }
         }
+        .padding(.horizontal)
+
     }
 }

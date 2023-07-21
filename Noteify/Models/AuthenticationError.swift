@@ -10,6 +10,7 @@ import Foundation
 enum AuthenticationError: Error {
     case invalidEmail
     case invalidPassword
+    case unknown
     
     var errorDescription: String {
         switch self {
@@ -17,6 +18,8 @@ enum AuthenticationError: Error {
             return "Email does not exist."
         case .invalidPassword:
             return "Email and password do not match."
+        case .unknown:
+            return "Unknown error occured."
         }
     }
 }

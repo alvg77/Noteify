@@ -6,109 +6,134 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct NoteListView: View {
-    @StateObject var noteVM = NoteViewModel()
-    @State var creating = false
+    @EnvironmentObject var userManager: UsersManager
+    
+    @StateObject var noteVM: NoteListViewModel
+    @StateObject var notesManager: NotesManager
+    @State private var creating = false
+    @State private var detailsNote: Note?
+
     
     var body: some View {
         ZStack {
+            Color("color.background")
+                .ignoresSafeArea()
             VStack {
-                LinearGradient(colors: [.orange, .purple], startPoint: .topLeading, endPoint: .bottomTrailing)
-                    .mask {
-                        Text("Your notes")
-                            .bold()
-                            .font(.largeTitle)
-                            .scaleEffect(1.2)
-                            .padding(.bottom)
-                    }
-                    .frame(maxHeight: 40)
-                    .padding(.all)
-                ZStack {
+                heading
+                    .padding([.top, .leading])
+                    .frame(height: 64)
+                if noteVM.notes.isEmpty {
+                    noNotes
+                } else {
                     notes
-                    plusButton
                 }
+     
+                Spacer()
+                plusButton
             }
         }
+        .fontDesign(.rounded)
+        .sheet(isPresented: $creating) {
+            NewNoteView(noteVM: NewNoteViewModel(noteManager: notesManager))
+                .interactiveDismissDisabled(true)
+        }
+        .sheet(item: $detailsNote) { detailsNote in
+            DetailsNoteView(noteVM: DetailsNoteViewModel(notesManager: notesManager, note: detailsNote))
+                .interactiveDismissDisabled(true)
+        }
+        .onAppear {
+            noteVM.fetchNotes(currentUser: userManager.currentUser)
+        }
+    }
+ 
+    @ViewBuilder var heading: some View {
+        HStack {
+            Text("Your Notes")
+                .fontWeight(.heavy)
+                .font(.largeTitle)
+                .bold()
+                .foregroundColor(.accentColor)
+            Spacer()
+            Button("Logout") {
+                try? Auth.auth().signOut()
+                userManager.currentUser = nil
+            }
+        }
+        .padding(.all)
+    }
+    
+    @ViewBuilder var noNotes: some View {
+        VStack {
+            Spacer()
+            Text("Wow, such emptiness")
+                .font(.title)
+            Text(#"(☞ﾟヮﾟ)☞"#)
+                .padding(.top, 80)
+                .font(.system(size: 56))
+                .rotationEffect(Angle.degrees(50))
+            Spacer()
+        }
+        .fontWeight(.heavy)
+        .foregroundColor(.accentColor)
+        .opacity(0.66)
     }
     
     @ViewBuilder var notes: some View {
-        ScrollView {
-            VStack {
-                ForEach(noteVM.notes) { note in
-                    ZStack {
-                        NoteCard(note: note)
-                        HStack {
-                            Spacer()
-
-                            VStack {
-                                Button {
-                                    noteVM.completeNote(id: note.id)
-                                } label: {
-                                    Image(systemName: note.isCompleted ? "circle.circle.fill" : "circle")
-                                        .animation(.default)
-                                        .scaleEffect(2)
-                                        .padding(.trailing)
-
-                                }
-                                .padding(.trailing)
-                                .foregroundColor(.white)
-                            }
-                            .padding(.trailing)
-                        }
-
+        List {
+            ForEach(noteVM.notes) { note in
+                ZStack {
+                    NoteCard(note: note) {
+                        self.noteVM.updateCompletion(id: note.id)
                     }
-                    .padding(.bottom)
+                    
+                    HStack {
+                        Spacer()
+                        infoButton(note: note)
+                    }
                 }
-                invisibleElement
             }
-            .padding([.top, .bottom])
+            .onDelete { indexSet in
+                for i in indexSet {
+                    noteVM.deleteNote(index: i)
+                }
+            }
         }
     }
     
-    @ViewBuilder var invisibleElement: some View {
-        NoteCard(note: Note(id: -1, title: "", body: "", due: Date(), isCompleted: false))
-            .opacity(0)
-    }
-    
-    @ViewBuilder var background: some View {
-        LinearGradient(colors: [.purple, .yellow], startPoint: .topLeading, endPoint: .bottomTrailing)
-            .opacity(0.4)
-            .ignoresSafeArea()
+    @ViewBuilder func infoButton(note: Note) -> some View {
+        Button {
+            detailsNote = note
+        } label: {
+            Image(systemName: "info.circle.fill")
+                .font(.title2)
+        }
+        .disabled(note.isCompleted)
+        .buttonStyle(BorderlessButtonStyle())
     }
     
     @ViewBuilder var plusButton: some View {
-        VStack {
-            Spacer()
-            
+        Button {
+            creating.toggle()
+        } label: {
             HStack {
-                NavigationLink {
-                    NoteCreationView(creating: $creating)
-                } label: {
-                    Text("+")
-                        .font(.largeTitle)
-                        .padding(.all)
+                ZStack {
+                    Circle()
+                        .foregroundColor(.accentColor)
+                        .frame(width: 32)
+                    Image(systemName: "plus")
                         .foregroundColor(.white)
-                        .background(
-                            LinearGradient(
-                                colors: [.yellow, .purple],
-                                startPoint: .topLeading,
-                                endPoint: .bottomTrailing
-                            )
-                            .mask {
-                                Circle()
-                            }
-                        )
-                        .scaleEffect(1.5)
-                        .padding(.all)
+                        .font(.title3)
                 }
+                Text("Add a note")
+                    .font(.title3)
+                    .fontWeight(.heavy)
             }
-        }
-    }
-}
 
-struct NotesListView_Previews: PreviewProvider {
-    static var previews: some View {
-        NoteListView(noteVM: NoteViewModel())
+        }
+        .padding(.all)
+        .foregroundColor(.accentColor)
     }
 }
